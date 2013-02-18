@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>System - Access Manager</name>
+	<author>Carsten Engel</author>
+	<creationDate>febuari 2012</creationDate>
+	<copyright>Copyright (C) 2012 Carsten Engel, pages-and-items</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>-</authorEmail>
+	<authorUrl>www.pages-and-items.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Enforces various access restrictions as set in component Access-Manager. Don't forget to ENABLE this plugin. Make sure this plugin is first in the plugin order of system plugins.</description>
+	<files>
+		<filename plugin="accessmanager">accessmanager.php</filename>		
+	</files>	
+</extension>

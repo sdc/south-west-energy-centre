@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ENERGYCENTRECOURSES_ENERGYCENTRECOURSES_VIEW_DEFAULT_TITLE">
+		<message>
+      <![CDATA[COM_ENERGYCENTRECOURSES_EENERGYCENTRECOURSES_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+  <fields name="request">
+    <fieldset name="request">
+      <field
+              name="id"
+              type="list"
+              label="COM_ENERGYCENTRECOURSES_ENERGYCENTRECOURSES_FIELD_GREETING_LABEL"
+              description="COM_ENERGYCENTRECOURSES_ENERGYCENTRECOURSES_FIELD_GREETING_DESC"
+              default="1"
+      >
+              <option value="1">Whoop</option>
+              <option value="2">Cheese</option>
+      </field>
+    </fieldset>
+  </fields>
+</metadata>

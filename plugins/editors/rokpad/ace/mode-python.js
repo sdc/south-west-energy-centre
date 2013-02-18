@@ -1,0 +1,52 @@
+/*
+ * Copyright (c) 2010, Ajax.org B.V.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *     * Neither the name of Ajax.org B.V. nor the
+ *       names of its contributors may be used to endorse or promote products
+ *       derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL AJAX.ORG B.V. BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+define("ace/mode/python",["require","exports","module","ace/lib/oop","ace/mode/text","ace/tokenizer","ace/mode/python_highlight_rules","ace/mode/folding/pythonic","ace/range"],function(c,e,a){var g=c("../lib/oop");
+var d=c("./text").Mode;var h=c("../tokenizer").Tokenizer;var f=c("./python_highlight_rules").PythonHighlightRules;var j=c("./folding/pythonic").FoldMode;
+var b=c("../range").Range;var i=function(){this.$tokenizer=new h(new f().getRules());this.foldingRules=new j("\\:");};g.inherits(i,d);(function(){this.toggleCommentLines=function(l,s,t,p){var r=true;
+var u=/^(\s*)#/;for(var q=t;q<=p;q++){if(!u.test(s.getLine(q))){r=false;break;}}if(r){var n=new b(0,0,0,0);for(var q=t;q<=p;q++){var v=s.getLine(q);var o=v.match(u);
+n.start.row=q;n.end.row=q;n.end.column=o[0].length;s.replace(n,o[1]);}}else{s.indentRows(t,p,"#");}};this.getNextLineIndent=function(q,m,o){var l=this.$getIndent(m);
+var p=this.$tokenizer.getLineTokens(m,q);var r=p.tokens;if(r.length&&r[r.length-1].type=="comment"){return l;}if(q=="start"){var n=m.match(/^.*[\{\(\[\:]\s*$/);
+if(n){l+=o;}}return l;};var k={pass:1,"return":1,raise:1,"break":1,"continue":1};this.checkOutdent=function(o,l,m){if(m!=="\r\n"&&m!=="\r"&&m!=="\n"){return false;
+}var p=this.$tokenizer.getLineTokens(l.trim(),o).tokens;if(!p){return false;}do{var n=p.pop();}while(n&&(n.type=="comment"||(n.type=="text"&&n.value.match(/^\s+$/))));
+if(!n){return false;}return(n.type=="keyword"&&k[n.value]);};this.autoOutdent=function(n,o,p){p+=1;var l=this.$getIndent(o.getLine(p));var m=o.getTabString();
+if(l.slice(-m.length)==m){o.remove(new b(p,l.length-m.length,p,l.length));}};}).call(i.prototype);e.Mode=i;});define("ace/mode/python_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"],function(c,b,e){var f=c("../lib/oop");
+var a=c("./text_highlight_rules").TextHighlightRules;var d=function(){var l=("and|as|assert|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|not|or|pass|print|raise|return|try|while|with|yield");
+var o=("True|False|None|NotImplemented|Ellipsis|__debug__");var j=("abs|divmod|input|open|staticmethod|all|enumerate|int|ord|str|any|eval|isinstance|pow|sum|basestring|execfile|issubclass|print|super|binfile|iter|property|tuple|bool|filter|len|range|type|bytearray|float|list|raw_input|unichr|callable|format|locals|reduce|unicode|chr|frozenset|long|reload|vars|classmethod|getattr|map|repr|xrange|cmp|globals|max|reversed|zip|compile|hasattr|memoryview|round|__import__|complex|hash|min|set|apply|delattr|help|next|setattr|buffer|dict|hex|object|slice|coerce|dir|id|oct|sorted|intern");
+var v=this.createKeywordMapper({"invalid.deprecated":"debugger","support.function":j,"constant.language":o,keyword:l},"identifier");var q="(?:r|u|ur|R|U|UR|Ur|uR)?";
+var n="(?:(?:[1-9]\\d*)|(?:0))";var s="(?:0[oO]?[0-7]+)";var h="(?:0[xX][\\dA-Fa-f]+)";var i="(?:0[bB][01]+)";var k="(?:"+n+"|"+s+"|"+h+"|"+i+")";var p="(?:[eE][+-]?\\d+)";
+var u="(?:\\.\\d+)";var g="(?:\\d+)";var m="(?:(?:"+g+"?"+u+")|(?:"+g+"\\.))";var t="(?:(?:"+m+"|"+g+")"+p+")";var r="(?:"+t+"|"+m+")";this.$rules={start:[{token:"comment",regex:"#.*$"},{token:"string",regex:q+'"{3}(?:[^\\\\]|\\\\.)*?"{3}'},{token:"string",merge:true,regex:q+'"{3}.*$',next:"qqstring"},{token:"string",regex:q+'"(?:[^\\\\]|\\\\.)*?"'},{token:"string",regex:q+"'{3}(?:[^\\\\]|\\\\.)*?'{3}"},{token:"string",merge:true,regex:q+"'{3}.*$",next:"qstring"},{token:"string",regex:q+"'(?:[^\\\\]|\\\\.)*?'"},{token:"constant.numeric",regex:"(?:"+r+"|\\d+)[jJ]\\b"},{token:"constant.numeric",regex:r},{token:"constant.numeric",regex:k+"[lL]\\b"},{token:"constant.numeric",regex:k+"\\b"},{token:v,regex:"[a-zA-Z_$][a-zA-Z0-9_$]*\\b"},{token:"keyword.operator",regex:"\\+|\\-|\\*|\\*\\*|\\/|\\/\\/|%|<<|>>|&|\\||\\^|~|<|>|<=|=>|==|!=|<>|="},{token:"paren.lparen",regex:"[\\[\\(\\{]"},{token:"paren.rparen",regex:"[\\]\\)\\}]"},{token:"text",regex:"\\s+"}],qqstring:[{token:"string",regex:'(?:[^\\\\]|\\\\.)*?"{3}',next:"start"},{token:"string",merge:true,regex:".+"}],qstring:[{token:"string",regex:"(?:[^\\\\]|\\\\.)*?'{3}",next:"start"},{token:"string",merge:true,regex:".+"}]};
+};f.inherits(d,a);b.PythonHighlightRules=d;});define("ace/mode/folding/pythonic",["require","exports","module","ace/lib/oop","ace/mode/folding/fold_mode"],function(b,a,c){var d=b("../../lib/oop");
+var f=b("./fold_mode").FoldMode;var e=a.FoldMode=function(g){this.foldingStartMarker=new RegExp("([\\[{])(?:\\s*)$|("+g+")(?:\\s*)(?:#.*)?$");};d.inherits(e,f);
+(function(){this.getFoldWidgetRange=function(j,i,k){var g=j.getLine(k);var h=g.match(this.foldingStartMarker);if(h){if(h[1]){return this.openingBracketBlock(j,h[1],k,h.index);
+}if(h[2]){return this.indentationBlock(j,k,h.index+h[2].length);}return this.indentationBlock(j,k);}};}).call(e.prototype);});define("ace/mode/folding/fold_mode",["require","exports","module","ace/range"],function(b,a,c){var e=b("../../range").Range;
+var d=a.FoldMode=function(){};(function(){this.foldingStartMarker=null;this.foldingStopMarker=null;this.getFoldWidget=function(h,g,i){var f=h.getLine(i);
+if(this.foldingStartMarker.test(f)){return"start";}if(g=="markbeginend"&&this.foldingStopMarker&&this.foldingStopMarker.test(f)){return"end";}return"";
+};this.getFoldWidgetRange=function(g,f,h){return null;};this.indentationBlock=function(l,p,g){var o=/\S/;var q=l.getLine(p);var j=q.search(o);if(j==-1){return;
+}var h=g||q.length;var m=l.getLength();var n=p;var i=p;while(++p<m){var f=l.getLine(p).search(o);if(f==-1){continue;}if(f<=j){break;}i=p;}if(i>n){var k=l.getLine(i).length;
+return new e(n,h,i,k);}};this.openingBracketBlock=function(j,l,k,h,f){var m={row:k,column:h+1};var g=j.$findClosingBracket(l,m,f);if(!g){return;}var i=j.foldWidgets[g.row];
+if(i==null){i=this.getFoldWidget(j,g.row);}if(i=="start"&&g.row>m.row){g.row--;g.column=j.getLine(g.row).length;}return e.fromPoints(m,g);};}).call(d.prototype);
+});

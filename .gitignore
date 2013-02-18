@@ -1,0 +1,10 @@
+*~
+Thumbs.db
+*Thumbs.db
+configuration.php
+cache/*
+images/news/*
+includes/connection.php
+attachments/*
+administrator/logs/*
+tmp/*

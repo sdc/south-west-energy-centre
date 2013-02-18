@@ -1,0 +1,1938 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="module" version="1.7" client="site" method="upgrade">
+
+	<name>Plimun Nivo Slider</name>
+
+	<author>PLIMUN</author>
+
+	<creationDate>September 2011</creationDate>
+
+	<copyright>Copyright (C) 2010 - 2011 plimun.com. All rights reserved.</copyright>
+
+	<license>GNU/GPL</license>
+
+	<authorEmail>info@plimun.com</authorEmail>
+
+	<authorUrl>www.plimun.com</authorUrl>
+
+	<version>1.0</version>	
+
+	<description>
+
+		<![CDATA[
+
+		Plimun Nivo Slider
+
+		<br/>
+
+		<p>
+
+		]]>
+
+	</description>
+
+	<files>
+
+		<filename module="mod_PlimunNivoSlider">mod_PlimunNivoSlider.php</filename>
+
+		<filename>index.html</filename>
+
+		<filename>helper.php</filename>
+
+		<filename>tmpl/index.html</filename>
+
+		<filename>tmpl/default.php</filename>
+
+		<folder>js</folder>
+
+		<folder>fonts</folder>
+
+		<folder>themes</folder>
+
+		<folder>css</folder>
+
+		<folder>images</folder>
+
+		<folder>elements</folder>
+
+	</files>
+
+<config>
+
+		<fields name="params" addfieldpath="/modules/mod_PlimunNivoSlider/elements">
+
+			<fieldset name="basic">
+
+
+
+	<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Settings&lt;/div&gt;" />
+
+
+
+		<field name="moduleclass_sfx" type="text"  default="" label="Module Class Suffix" description="" />
+
+
+
+		<field name="slidewidth" type="text"  default="618" label="Slideshow Width" description="Enter width of slide show .Make sure your images are the same size" />
+
+
+
+		<field name="slideheight" type="text"  default="246" label="Slideshow Height" description="Enter height of slide show . Make sure your images are the same size" />
+
+
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Preferences&lt;/div&gt;" />
+
+
+
+
+
+
+
+		<field name="menu_style" type="list"  default="random" label="SlideShow Effect" description="Effect">
+
+
+
+			<option value="random">Random</option>
+
+
+
+			<option value="sliceDown">sliceDown</option>
+
+
+
+			<option value="sliceDownLeft">sliceDownLeft</option>
+
+
+
+			<option value="sliceUp">sliceUp</option>			
+
+
+
+			<option value="sliceUpLeft">sliceUpLeft</option>
+
+
+
+			<option value="sliceUpDown">sliceUpDown</option>
+
+
+
+			<option value="sliceUpDownLeft">sliceUpDownLeft</option>			
+
+
+
+			<option value="slideInLeft">slideInLeft</option>
+
+
+
+			<option value="fade">fade</option>
+
+
+
+			<option value="slideInRight">slideInRight</option>			
+
+
+
+			<option value="boxRandom">boxRandom</option>
+
+
+
+			<option value="boxRain">boxRain</option>
+
+
+
+			<option value="boxRainReverse">boxRainReverse</option>			
+
+
+
+			<option value="boxRainGrow">boxRainGrow</option>
+
+
+
+			<option value="boxRainGrowReverse">boxRainGrowReverse</option>
+
+
+
+		</field>
+
+
+
+
+
+	<field name="timeinterval" type="text"  default="2500" label="Time Interval" description="Enter Time between each slide" />
+
+
+
+
+
+
+
+	<field name="velocity" type="text"  default="500" label="animation Speed" description="Slide transition speed" />
+
+
+
+	<field name="manual" type="list"  default="no" label="manual transitions" description="Force manual transitions">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+		</field>
+
+
+
+
+
+<field name="linktarget" type="list"  default="_self" label="Links open in?" description="">
+
+<option value="_blank">New Window</option>
+
+<option value="_self">Same Window</option>
+
+</field>
+
+<field name="linkedtitle" type="list"  default="no" label="Linked Titles?" description="">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</field>
+
+
+
+
+
+	<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Appearance&lt;/div&gt;" />
+
+
+
+		
+
+<field name="align" type="list"  default="center" label="Module Align" description="">
+
+<option value="center">Center</option>
+
+<option value="left">Left</option>
+
+</field>
+
+
+
+<field name="backgroundcolor" type="colorpicker"  default="#fff" label="Module Backgound" description="" />
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;Border&lt;/div&gt;" />
+
+<field name="border" type="list"  default="0" label="SlideShow Border" description="">
+
+<option value="0">0px</option>
+
+<option value="1">1px</option>
+
+<option value="2">2px</option>
+
+<option value="3">3px</option>
+
+<option value="4">4px</option>
+
+<option value="5">5px</option>
+
+<option value="6">6px</option>
+
+<option value="7">7px</option>
+
+<option value="8">8px</option>
+
+<option value="9">9px</option>
+
+<option value="10">10px</option>
+
+</field>
+
+
+
+<field name="bordercolor" type="colorpicker"  default="#000" label="Border Color" description="" />
+
+
+
+<field name="borderrounded" type="list"  default="no" label="Border Rounded?" description="">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</field>
+
+
+
+<field name="shadow" type="list"  default="no" label="Shadow?" description="">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</field>
+
+
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Navigation&lt;/div&gt;" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<field name="navigation" type="list"  default="yes" label="Dots Navigation" description="The menu style">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+		</field>
+
+<field name="arrows" type="list" default="yes" label="display arrows" description="Displays arrows">
+
+<option value="yes">Yes</option>
+
+<option value="no">No</option>
+
+</field>
+
+
+
+
+
+	<field name="hidetools" type="list"  default="no" label="Hide arrows on mouse out:" description="Hide Arrows On mouse out">
+
+
+
+			<option value="yes">Yes</option>
+
+
+
+			<option value="no">No</option>
+
+
+
+
+
+
+
+		</field>
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Dots&lt;/div&gt;" />
+
+
+
+
+
+	<field name="dotspos" type="list"  default="topright" label="Dots Positin" description="">
+
+			<option value="top">Top</option>
+
+			<option value="topright">Top Right</option>
+
+			<option value="topleft">Top Left</option>
+
+			<option value="bottom">Bottom</option>
+
+			<option value="bottomright">Bottom Right</option>
+
+			<option value="bottomleft">Bottom Left</option>
+
+			<option value="bottomm">Under the module</option>
+
+
+
+		</field>
+
+
+
+	<field name="dotsstyle" type="list"  default="style1" label="Dots Style" description="">
+
+			<option value="style1">style1</option>
+
+			<option value="style2">style2</option>
+
+			<option value="style3">style3</option>
+
+			<option value="style4">style4</option>
+
+			<option value="style5">style5</option>
+
+			<option value="style6">style6</option>
+
+			<option value="style7">style7</option>
+
+			<option value="style8">style8</option>
+
+			<option value="style9">style9</option>
+
+			<option value="style10">style10</option>
+
+			<option value="style11">style11</option>
+
+			<option value="style12">style12</option>
+
+			<option value="style13">style13</option>
+
+
+
+		</field>
+
+		
+
+
+
+
+
+
+
+		
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Arrows&lt;/div&gt;" />
+
+
+
+	<field name="arrowsstyle" type="list"  default="style1" label="Arrows Style" description="">
+
+			<option value="style1">style1</option>
+
+			<option value="style2">style2</option>
+
+			<option value="style3">style3</option>
+
+			<option value="style4">style4</option>
+
+			<option value="style5">style5</option>
+
+			<option value="style6">style6</option>
+
+			<option value="style7">style7</option>
+
+			<option value="style8">style8</option>
+
+			<option value="style9">style9</option>
+
+			<option value="style10">style10</option>
+
+			<option value="style11">style11</option>
+
+			<option value="style12">style12</option>
+
+
+
+		</field>
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Appearance&lt;/div&gt;" />		
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;Title&lt;/div&gt;" />
+
+
+
+<field name="labelcolor" type="colorpicker"  default="#fff" label="Title Color" description="" />
+
+
+
+
+
+
+
+<field name="labelsize" type="list"  default="22" label="Title Font Size" description="">
+
+<option value="10">10px</option>
+
+<option value="11">11px</option>
+
+<option value="12">12px</option>
+
+<option value="13">13px</option>
+
+<option value="14">14px</option>
+
+<option value="15">15px</option>
+
+<option value="16">16px</option>
+
+<option value="17">17px</option>
+
+<option value="18">18px</option>
+
+<option value="19">19px</option>
+
+<option value="20">20px</option>
+
+<option value="21">21px</option>
+
+<option value="22">22px</option>
+
+<option value="23">23px</option>
+
+<option value="24">24px</option>
+
+<option value="25">25px</option>
+
+<option value="26">26px</option>
+
+<option value="27">27px</option>
+
+<option value="28">28px</option>
+
+<option value="29">29px</option>
+
+<option value="30">30px</option>
+
+<option value="31">31px</option>
+
+<option value="32">32px</option>
+
+<option value="33">33px</option>
+
+<option value="34">34px</option>
+
+<option value="35">35px</option>
+
+</field>
+
+
+
+
+
+
+
+
+
+
+
+<field name="titlefont" type="list"  default="BebasNeueRegular" label="Title Font" description="">
+
+
+
+<option value="BebasNeueRegular">BebasNeueRegular</option>
+
+
+
+<option value="CaviarDreamsBold">CaviarDreamsBold</option>
+
+
+
+<option value="LillyRegular">LillyRegular</option>
+
+
+
+<option value="arial">Arial, Helvetica, sans-serif</option>
+
+
+
+<option value="tnr">"Times New Roman", Times, serif</option>
+
+
+
+<option value="cn">"Courier New", Courier, monospace</option>
+
+
+
+<option value="georgia">Georgia, "Times New Roman", Times, serif</option>
+
+
+
+<option value="verdana">Verdana, Arial, Helvetica, sans-serif</option>
+
+
+
+<option value="default">Default As Template</option>
+
+
+
+
+
+
+
+</field>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;Desc&lt;/div&gt;" />
+
+
+
+<field name="desccolor" type="colorpicker"  default="#fff" label="Desc Color" description="" />
+
+
+
+
+
+
+
+<field name="descsize" type="list"  default="10" label="Desc Font Size" description="">
+
+<option value="10">10px</option>
+
+<option value="11">11px</option>
+
+<option value="12">12px</option>
+
+<option value="13">13px</option>
+
+<option value="14">14px</option>
+
+<option value="15">15px</option>
+
+<option value="16">16px</option>
+
+<option value="17">17px</option>
+
+<option value="18">18px</option>
+
+<option value="19">19px</option>
+
+
+
+<option value="20">20px</option>
+
+
+
+<option value="21">21px</option>
+
+
+
+<option value="22">22px</option>
+
+
+
+<option value="23">23px</option>
+
+
+
+<option value="24">24px</option>
+
+
+
+<option value="25">25px</option>
+
+
+
+<option value="26">26px</option>
+
+
+
+<option value="27">27px</option>
+
+
+
+</field>
+
+
+
+
+
+
+
+
+
+
+
+<field name="descfont" type="list"  default="arial" label="Desc Font" description="">
+
+
+
+<option value="BebasNeueRegular">BebasNeueRegular</option>
+
+
+
+<option value="CaviarDreamsBold">CaviarDreamsBold</option>
+
+
+
+<option value="LillyRegular">LillyRegular</option>
+
+
+
+<option value="arial">Arial, Helvetica, sans-serif</option>
+
+
+
+<option value="tnr">"Times New Roman", Times, serif</option>
+
+
+
+<option value="cn">"Courier New", Courier, monospace</option>
+
+
+
+<option value="georgia">Georgia, "Times New Roman", Times, serif</option>
+
+
+
+<option value="verdana">Verdana, Arial, Helvetica, sans-serif</option>
+
+
+
+<option value="default">Default As Template</option>
+
+
+
+</field>
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Caption&lt;/div&gt;" />
+
+
+
+<field name="captionbg" type="colorpicker"  default="#000" label="Caption Background" description="" />
+
+
+
+<field name="captionob" type="list"  default="0.8" label="Caption opacity" description="">
+
+<option value="0.1">0.1</option>
+
+<option value="0.2">0.2</option>
+
+<option value="0.3">0.3</option>
+
+<option value="0.4">0.4</option>
+
+<option value="0.5">0.5</option>
+
+<option value="0.6">0.6</option>
+
+<option value="0.7">0.7</option>
+
+<option value="0.8">0.8</option>
+
+<option value="0.9">0.9</option>
+
+<option value="1">1</option>
+
+</field>
+
+
+
+
+
+	<field name="captionpos" type="list"  default="bottom" label="Caption Positin" description="">
+
+			<option value="top">Top</option>
+
+			<option value="bottom">Bottom</option>
+
+			<option value="left">Left</option>
+
+			<option value="right">Right</option>
+
+			<option value="custom">Custom Position</option>
+
+		</field>
+
+
+
+		<field type="spacer" name="&lt;div style=&quot;color:#000; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#CCCCCC;&quot;&gt;Caption Custom Position&lt;br &gt;&lt;span style=&quot;color:#FF0000; font-size:11px;&quot;&gt;You must select &quot;custom position&quot; from the Caption Positin list menu above so the settings below take effect&lt;/span&gt;&lt;/div&gt;" />
+
+
+
+	<field name="hspace" type="list"  default="left" label="Caption Horizontal space/Margin From?" description="Caption Horizontal space From?">
+
+			<option value="left">Left</option>
+
+			<option value="right">Right</option>
+
+		</field>
+
+		<field name="cfromh" type="text" default="150" label="Caption Horizontal space/Margin(px)" description="Space from left or right to the caption box" />
+
+
+
+	<field name="vspace" type="list"  default="left" label="Caption Vertical space/Margin From?" description="Caption Vertical space From?">
+
+			<option value="top">Top</option>
+
+			<option value="bottom">Bottom</option>
+
+		</field>
+
+		
+
+
+
+
+
+		<field name="cfromv" type="text" default="150" label="Caption Vertical space/Margin(px)" description="Space from bottom or top to the caption box" />
+
+		
+
+		
+
+		<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;Caption Dimensions&lt;/div&gt;" />
+
+				<field name="captionwidth" type="text" default="250" label="Caption Width(px)" description="For Right,Left and custom position only" />
+
+
+
+	<field name="captionh" type="list"  default="auto" label="Caption Height" description="">
+
+			<option value="auto">Auto Height</option>
+
+			<option value="full">Full Height</option>
+
+			<option value="custom">Custom Height</option>
+
+		</field>
+
+		
+
+				<field name="captionh2" type="text" default="400" label="Custom Caption Height(px)" description="You must select custom height from the above list menu" />
+
+				
+
+				<field name="crounded" type="list"  default="none" label="Rounded Caption?" description="">
+
+<option value="right">Right Only</option>
+
+<option value="left"> Left Only</option>
+
+<option value="top">Top Only</option>
+
+<option value="bottom">Bottom Only</option>
+
+<option value="both">ALL</option>
+
+<option value="none">None</option>
+
+</field>
+
+		
+
+
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Jquery&lt;/div&gt;" />
+
+
+
+
+
+
+
+
+
+
+
+		<field name="show_jquery" type="radio" default="yes" label="Load jquery" description="">
+
+
+
+			<option value="yes">Yes</option>
+
+
+
+			<option value="no">No</option>
+
+
+
+		</field>
+
+		
+
+		<field name="jver" type="list" default="1.6.1" label="jQuery Version" description="">
+
+
+
+<option value="1.4.0">1.4.0</option>
+
+
+
+<option value="1.4.1">1.4.1</option>
+
+
+
+<option value="1.4.2">1.4.2</option>
+
+
+
+<option value="1.4.3">1.4.3</option>
+
+
+
+<option value="1.4.4">1.4.4</option>
+
+
+
+<option value="1.5.0">1.5.0</option>
+
+
+
+<option value="1.5.1">1.5.1</option>
+
+
+
+<option value="1.5.2">1.5.2</option>
+
+
+
+<option value="1.6.0">1.6.0</option>
+
+
+
+<option value="1.6.1">1.6.1 (Local Copy)</option>
+
+
+
+<option value="1.6.2">1.6.2</option>
+
+
+
+<option value="1.6.3">1.6.3</option>
+
+
+
+</field>
+
+
+
+<field name="load" type="radio" default="onmod" label="Loading Method" description="">
+
+
+
+<option value="onload">onLoad</option>
+
+
+
+<option value="onmod">onMod</option>
+
+
+
+</field>
+
+
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Images&lt;/div&gt;" />
+
+
+
+
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 1&lt;/div&gt;" />
+
+
+
+<field name="img1" type="text" size="60" default="modules/mod_PlimunNivoSlider/images/001.jpg" label="Image1 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label1" type="text" size="60"   default="" label="Label1" description="" />
+
+
+
+<field name="desc1" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 1" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link1" type="text" size="60"  default="" label="Image1 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image one parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+<!--Image 2 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 2&lt;/div&gt;" />
+
+
+
+<field name="img2" type="text" size="60"  default="modules/mod_PlimunNivoSlider/images/002.jpg" label="Image2 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<!--<field name="label2" type="text" size="60" size="60" default="" label="Image2 Label" description="Images1 Label" />-->
+
+
+
+
+
+
+
+<field name="label2" type="text" size="60"   default="" label="Label2" description="" />
+
+
+
+<field name="desc2" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 2" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link2" type="text" size="60" default="" label="Image2 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 2 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 3 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 3&lt;/div&gt;" />
+
+
+
+<field name="img3" type="text" size="60" default="" label="Image3 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<!--<field name="label3" type="text" size="60" size="60" default="" label="Image3 Label" description="Images1 Label" />-->
+
+
+
+
+
+
+
+<field name="label3" type="text" size="60"  default="" label="Label3" description="" />
+
+
+
+<field name="desc3" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 3" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link3" type="text" size="60" default="" label="Image3 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 3 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 4 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 4&lt;/div&gt;" />
+
+
+
+<field name="img4" type="text" size="60" default="" label="Image4 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label4" type="text" size="60" default="" label="Label4" description="" />
+
+
+
+<field name="desc4" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 4" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link4" type="text" size="60" default="" label="Image4 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 4 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 5 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 5&lt;/div&gt;" />
+
+
+
+<field name="img5" type="text" size="60" default="" label="Image5 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<!--<field name="label5" type="text" size="60" default="" label="Image5 Label" description="Images1 Label" />-->
+
+
+
+
+
+
+
+<field name="label5" type="text" size="60"  default="" label="Label5" description="" />
+
+
+
+<field name="desc5" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 5" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link5" type="text" size="60" default="" label="Image5 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 5 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 6 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 6&lt;/div&gt;" />
+
+
+
+<field name="img6" type="text" size="60" default="" label="Image6 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label6" type="text" size="60"  default="" label="Label6" description="" />
+
+
+
+<field name="desc6" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 6" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link6" type="text" size="60" default="" label="Image6 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 6 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 7 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 7&lt;/div&gt;" />
+
+
+
+<field name="img7" type="text" size="60" default="" label="Image7 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<!--<field name="label7" type="text" size="60" default="" label="Image1 Labe7" description="Images1 Label" />-->
+
+
+
+
+
+
+
+<field name="label7" type="text" size="60"  default="" label="Label7" description="" />
+
+
+
+<field name="desc7" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 7" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link7" type="text" size="60" default="" label="Image7 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 7 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 8 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 8&lt;/div&gt;" />
+
+
+
+<field name="img8" type="text" size="60" default="" label="Image8 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<!--<field name="label8" type="text" size="60" default="" label="Image8 Label" description="Images1 Label" />-->
+
+
+
+
+
+
+
+<field name="label8" type="text" size="60"  default="" label="Label8" description="" />
+
+
+
+<field name="desc8" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 8" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link8" type="text" size="60" default="" label="Image8 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 8 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 9 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 9&lt;/div&gt;" />
+
+
+
+<field name="img9" type="text" size="60" default="" label="Image9 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<!--<field name="label9" type="text" size="60" default="" label="Image9 Label" description="Images1 Label" />-->
+
+
+
+
+
+
+
+<field name="label9" type="text" size="60"  default="" label="Label9" description="" />
+
+
+
+<field name="desc9" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 9" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link9" type="text" size="60" default="" label="Image9 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 9 parameter-->
+
+
+
+
+
+
+
+<field name="@spacer" type="spacer" default="" label="" description="" />
+
+
+
+
+
+
+
+<!--Image 10 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 10&lt;/div&gt;" />
+
+
+
+<field name="img10" type="text" size="60" default="" label="Image10 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label10" type="text" size="60"  default="" label="Label10" description="" />
+
+
+
+<field name="desc10" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 10" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link10" type="text" size="60" default="" label="Image10 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 10 parameter-->
+
+
+
+
+
+<!--Image 11 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 11&lt;/div&gt;" />
+
+
+
+<field name="img11" type="text" size="60" default="" label="Image11 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label11" type="text" size="60"  default="" label="Label11" description="" />
+
+
+
+<field name="desc11" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 11" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link11" type="text" size="60" default="" label="Image11 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 11 parameter-->
+
+
+
+
+
+
+
+
+
+
+
+<!--Image 12 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 12&lt;/div&gt;" />
+
+
+
+<field name="img12" type="text" size="60" default="" label="Image12 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label12" type="text" size="60"  default="" label="Label12" description="" />
+
+
+
+<field name="desc12" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 12" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link12" type="text" size="60" default="" label="Image12 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 12 parameter-->
+
+
+
+
+
+
+
+<!--Image 13 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 13&lt;/div&gt;" />
+
+
+
+<field name="img13" type="text" size="60" default="" label="Image13 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label13" type="text" size="60"  default="" label="Label13" description="" />
+
+
+
+<field name="desc13" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 13" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link13" type="text" size="60" default="" label="Image13 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 13 parameter-->
+
+
+
+
+
+<!--Image 14 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 14&lt;/div&gt;" />
+
+
+
+<field name="img14" type="text" size="60" default="" label="Image14 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label14" type="text" size="60"  default="" label="Label14" description="" />
+
+
+
+<field name="desc14" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 14" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link14" type="text" size="60" default="" label="Image14 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 14 parameter-->
+
+
+
+<!--Image 15 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 15&lt;/div&gt;" />
+
+
+
+<field name="img15" type="text" size="60" default="" label="Image15 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+
+
+<field name="label15" type="text" size="60"  default="" label="Label15" description="" />
+
+
+
+<field name="desc15" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 15" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link15" type="text" size="60" default="" label="Image15 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 15 parameter-->
+
+
+
+
+
+<!--Image 16 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 16&lt;/div&gt;" />
+
+
+
+<field name="img16" type="text" size="60" default="" label="Image16 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label16" type="text" size="60"  default="" label="Label16" description="" />
+
+
+
+<field name="desc16" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 16" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link16" type="text" size="60" default="" label="Image16 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 16 parameter-->
+
+
+
+
+
+<!--Image 17 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 17&lt;/div&gt;" />
+
+
+
+<field name="img17" type="text" size="60" default="" label="Image17 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label17" type="text" size="60"  default="" label="Label17" description="" />
+
+
+
+<field name="desc17" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 17" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link17" type="text" size="60" default="" label="Image17 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 17 parameter-->
+
+
+
+<!--Image 18 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 18&lt;/div&gt;" />
+
+
+
+<field name="img18" type="text" size="60" default="" label="Image18 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label18" type="text" size="60"  default="" label="Label18" description="" />
+
+
+
+<field name="desc18" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 18" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link18" type="text" size="60" default="" label="Image18 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 18 parameter-->
+
+
+
+
+
+
+
+<!--Image 19 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 19&lt;/div&gt;" />
+
+
+
+<field name="img19" type="text" size="60" default="" label="Image19 Path" description="Images1 path URL" />
+
+
+
+
+
+
+
+<field name="label19" type="text" size="60"  default="" label="Label19" description="" />
+
+
+
+<field name="desc19" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 19" description="You Can Add HTML Here" />
+
+
+
+
+
+
+
+<field name="link19" type="text" size="60" default="" label="Image19 link" description="ie:http://www.google.com" />
+
+
+
+
+
+
+
+<!--End of image 19 parameter-->
+
+
+
+
+
+<!--Image 20 Parameter-->
+
+
+
+<field type="spacer" name="&lt;div style=&quot;color:#444; background:#ccc; height:12px; font-size:11px; font-weight:bold; padding:3px; margin:0; text-align:center;&quot;&gt;IMAGE 20&lt;/div&gt;" />
+
+
+
+<field name="img20" type="text" size="60" default="" label="Image20 Path" description="Images1 path URL" />
+
+<field name="label20" type="text" size="60"  default="" label="Label20" description="" />
+
+<field name="desc20" type="textarea" filter="raw" rows="7" cols="35"   default="" label="Desc 20" description="You Can Add HTML Here" />
+
+<field name="link20" type="text" size="60" default="" label="Image20 link" description="ie:http://www.google.com" />
+
+
+
+<!--End of image 20 parameter-->
+
+
+
+			</fieldset>
+
+		</fields>
+
+
+
+	</config>
+
+
+
+</extension>
+
+
+

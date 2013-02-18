@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="plugin" group="content" version="2.5.0" method="upgrade">
+  <name>Content - Read Less - Text</name>
+  <version>4.1</version>
+  <description>PLG_CONTENT_READLESSTEXT_DESCRIPTION</description>
+  <license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+    http://www.gnu.org/licenses/gpl.html
+  </license>
+  <author>parvus</author>
+  <authorEmail>parvus@operamail.com</authorEmail>
+  <authorUrl>http://joomlacode.org/gf/project/cutoff/</authorUrl>
+  <copyright>Copyright (C) 2010-2012. All rights reserved.</copyright>
+  <creationDate>August 2012</creationDate>
+
+  <config>
+    <fields name="params">
+      <fieldset name="length">
+        <field name="minimumTextLength" type="text" default="70" filter="integer" label="PLG_CONTENT_READLESSTEXT_MINIMUM_TEXT_LENGTH" description="PLG_CONTENT_READLESSTEXT_MINIMUM_TEXT_LENGTH_DESCRIPTION"></field>
+        <field name="cutOffTextLength" type="text" default="50" filter="integer" label="PLG_CONTENT_READLESSTEXT_CUT_OFF_TEXT_LENGTH" description="PLG_CONTENT_READLESSTEXT_CUT_OFF_TEXT_LENGTH_DESCRIPTION"></field>
+        <field name="lengthUnit" type="list" default="char" filter="word" label="PLG_CONTENT_READLESSTEXT_LENGTH_UNIT" description="PLG_CONTENT_READLESSTEXT_LENGTH_UNIT_DESCRIPTION">
+          <option value="char">PLG_CONTENT_READLESSTEXT_CHAR</option>
+          <option value="word">PLG_CONTENT_READLESSTEXT_WORD</option>
+          <option value="sentence">PLG_CONTENT_READLESSTEXT_SENTENCE</option>
+          <option value="paragraph">PLG_CONTENT_READLESSTEXT_PARAGRAPH</option>
+        </field>
+        <field name="retainWholeWords" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_RETAIN_WHOLE_WORDS" description="PLG_CONTENT_READLESSTEXT_RETAIN_WHOLE_WORDS_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="respectExistingReadmoreLink" type="radio" default="1" filter="integer" label="PLG_CONTENT_READLESSTEXT_RESPECT_EXISTING_READMORE_LINK" description="PLG_CONTENT_READLESSTEXT_RESPECT_EXISTING_READMORE_LINK_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+      
+      <fieldset name="when-active">
+        <field name="articleNumberSkipCount" type="text" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_ARTICLE_NUMBER_SKIP_COUNT" description="PLG_CONTENT_READLESSTEXT_ARTICLE_NUMBER_SKIP_COUNT_DESCRIPTION"></field>
+        <field name="articleNumberShortenCount" type="text" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_ARTICLE_NUMBER_SHORTEN_COUNT" description="PLG_CONTENT_READLESSTEXT_ARTICLE_NUMBER_SHORTEN_COUNT_DESCRIPTION"></field>
+        <field name="" type="spacer" hr="true"></field>
+        <field name="alwaysActiveForGuests" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_ALWAYS_ACTIVE_FOR_GUESTS" description="PLG_CONTENT_READLESSTEXT_ALWAYS_ACTIVE_FOR_GUESTS_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="when" type="list" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_WHEN" description="PLG_CONTENT_READLESSTEXT_WHEN_DESCRIPTION">
+          <option value="0">PLG_CONTENT_READLESSTEXT_COMMON_USAGE</option>
+          <option value="1">PLG_CONTENT_READLESSTEXT_SPECIFIC_USAGE</option>
+        </field>
+        <field name="allowed" type="textarea" cols="30" rows="5" default="" filter="string" label="PLG_CONTENT_READLESSTEXT_ALLOWED" description="PLG_CONTENT_READLESSTEXT_ALLOWED_DESCRIPTION"></field>
+        <field name="disallowed" type="textarea" cols="30" rows="5" default="" filter="string" label="PLG_CONTENT_READLESSTEXT_DISALLOWED" description="PLG_CONTENT_READLESSTEXT_DISALLOWED_DESCRIPTION"></field>
+        <field name="" type="spacer" hr="true"></field>
+        <field name="discover" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_DISCOVER" description="PLG_CONTENT_READLESSTEXT_DISCOVER_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="" type="spacer" hr="true"></field>
+      </fieldset>
+
+      <fieldset name="thumbnail">
+        <field name="createThumbnail" type="list" default="when_shortened" filter="word" label="PLG_CONTENT_READLESSTEXT_CREATE_THUMBNAIL" description="PLG_CONTENT_READLESSTEXT_CREATE_THUMBNAIL_DESCRIPTION">
+          <option value="no">JNO</option>
+          <option value="when_active">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE</option>
+          <option value="when_shortened">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE_AND_SHORTENED</option>
+        </field>
+        <field name="thumbPosition" type="list" default="left" filter="word" label="PLG_CONTENT_READLESSTEXT_THUMB_POSITION" description="PLG_CONTENT_READLESSTEXT_THUMB_POSITION_DESCRIPTION">
+          <option value="left">PLG_CONTENT_READLESSTEXT_UPPER_LEFT</option>
+          <option value="right">PLG_CONTENT_READLESSTEXT_UPPER_RIGHT</option>
+        </field>
+        <field name="defaultThumbnailTemplate" type="text" default="" filter="string" label="PLG_CONTENT_READLESSTEXT_DEFAULT_THUMBNAIL_TEMPLATE" description="PLG_CONTENT_READLESSTEXT_DEFAULT_THUMBNAIL_TEMPLATE_DESCRIPTION"></field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="minimumImageWidth" type="text" default="32" filter="integer" label="PLG_CONTENT_READLESSTEXT_MINIMUM_IMAGE_WIDTH" description="PLG_CONTENT_READLESSTEXT_MINIMUM_IMAGE_WIDTH_DESCRIPTION"></field>
+        <field name="minimumImageHeight" type="text" default="32" filter="integer" label="PLG_CONTENT_READLESSTEXT_MINIMUM_IMAGE_HEIGHT" description="PLG_CONTENT_READLESSTEXT_MINIMUM_IMAGE_HEIGHT_DESCRIPTION"></field>
+        <field name="minimumImageRatio" type="text" default="0.10" filter="integer" label="PLG_CONTENT_READLESSTEXT_MINIMUM_IMAGE_RATIO" description="PLG_CONTENT_READLESSTEXT_MINIMUM_IMAGE_RATIO_DESCRIPTION"></field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="thumbWidth" type="text" default="123" filter="integer" label="PLG_CONTENT_READLESSTEXT_THUMB_WIDTH" description="PLG_CONTENT_READLESSTEXT_THUMB_WIDTH_DESCRIPTION"></field>
+        <field name="thumbHeight" type="text" default="123" filter="integer" label="PLG_CONTENT_READLESSTEXT_THUMB_HEIGHT" description="PLG_CONTENT_READLESSTEXT_THUMB_HEIGHT_DESCRIPTION"></field>
+        <field name="cropHorizontalPosition" type="list" default="left" filter="word" label="PLG_CONTENT_READLESSTEXT_CROP_HORIZONTAL_POSITION" description="PLG_CONTENT_READLESSTEXT_CROP_HORIZONTAL_POSITION_DESCRIPTION">
+          <option value="left">PLG_CONTENT_READLESSTEXT_CROP_LEFT</option>
+          <option value="center">PLG_CONTENT_READLESSTEXT_CROP_CENTER</option>
+          <option value="right">PLG_CONTENT_READLESSTEXT_CROP_RIGHT</option>
+          <option value="no">PLG_CONTENT_READLESSTEXT_CROP_FULL_WIDTH</option>
+        </field>
+        <field name="cropVerticalPosition" type="list" default="top" filter="word" label="PLG_CONTENT_READLESSTEXT_CROP_VERTICAL_POSITION" description="PLG_CONTENT_READLESSTEXT_CROP_VERTICAL_POSITION_DESCRIPTION">
+          <option value="top">PLG_CONTENT_READLESSTEXT_CROP_TOP</option>
+          <option value="center">PLG_CONTENT_READLESSTEXT_CROP_CENTER</option>
+          <option value="bottom">PLG_CONTENT_READLESSTEXT_CROP_BOTTOM</option>
+          <option value="no">PLG_CONTENT_READLESSTEXT_CROP_FULL_HEIGHT</option>
+        </field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="thumbMargin" type="text" default="3" filter="words" label="PLG_CONTENT_READLESSTEXT_THUMB_MARGIN" description="PLG_CONTENT_READLESSTEXT_THUMB_MARGIN_DESCRIPTION"></field>
+        <field name="thumbPadding" type="text" default="-1" filter="integer" label="PLG_CONTENT_READLESSTEXT_THUMB_PADDING" description="PLG_CONTENT_READLESSTEXT_THUMB_PADDING_DESCRIPTION"></field>
+        <field name="thumbBorderWidth" type="text" default="1" filter="integer" label="PLG_CONTENT_READLESSTEXT_THUMB_BORDER_WIDTH" description="PLG_CONTENT_READLESSTEXT_THUMB_BORDER_WIDTH_DESCRIPTION"></field>
+        <field name="thumbBorderColor" type="text" default="#cccccc" filter="string" label="PLG_CONTENT_READLESSTEXT_THUMB_BORDER_COLOR" description="PLG_CONTENT_READLESSTEXT_THUMB_BORDER_COLOR_DESCRIPTION"></field>
+        <field name="thumbBorderStyle" type="list" default="solid" filter="word" label="PLG_CONTENT_READLESSTEXT_THUMB_BORDER_STYLE" description="PLG_CONTENT_READLESSTEXT_THUMB_BORDER_STYLE_DESCRIPTION">
+          <option value="dotted">Dotted</option>
+          <option value="dashed">Dashed</option>
+          <option value="solid">Solid</option>
+          <option value="double">Double</option>
+          <option value="groove">Groove</option>
+          <option value="ridge">Ridge</option>
+          <option value="inset">Inset</option>
+          <option value="outset">Outset</option>
+          <option value="none">None</option>
+        </field>
+        <field name="thumbClass" type="text" default="" filter="string" label="PLG_CONTENT_READLESSTEXT_THUMB_CLASS" description="PLG_CONTENT_READLESSTEXT_THUMB_CLASS_DESCRIPTION"></field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="thumbCacheTime" type="text" default="2419200" filter="integer" label="PLG_CONTENT_READLESSTEXT_THUMB_CACHE_TIME" description="PLG_CONTENT_READLESSTEXT_THUMB_CACHE_TIME_DESCRIPTION"></field>
+      </fieldset>      
+      
+      <fieldset name="prefix">
+        <field name="addPrefix" type="list" default="when_active" filter="word" label="PLG_CONTENT_READLESSTEXT_ADD_PREFIX" description="PLG_CONTENT_READLESSTEXT_ADD_PREFIX_DESCRIPTION">
+          <option value="no">JNO</option>
+          <option value="when_active">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE</option>
+          <option value="when_shortened">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE_AND_SHORTENED</option>
+        </field>
+        <field name="userPrefix" type="textarea" cols="30" rows="5" default="" filter="raw" label="PLG_CONTENT_READLESSTEXT_USER_PREFIX" description="PLG_CONTENT_READLESSTEXT_USER_PREFIX_DESCRIPTION"></field>
+        <field name="userPrefixLinksToFullArticle" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_USER_PREFIX_LINKS_TO_FULL_ARTICLE" description="PLG_CONTENT_READLESSTEXT_USER_PREFIX_LINKS_TO_FULL_ARTICLE_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="guestPrefix" type="textarea" cols="30" rows="5" default="" filter="raw" label="PLG_CONTENT_READLESSTEXT_GUEST_PREFIX" description="PLG_CONTENT_READLESSTEXT_GUEST_PREFIX_DESCRIPTION"></field>
+        <field name="guestPrefixLinksToFullArticle" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_GUEST_PREFIX_LINKS_TO_FULL_ARTICLE" description="PLG_CONTENT_READLESSTEXT_GUEST_PREFIX_LINKS_TO_FULL_ARTICLE_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="prefixDateFormat" type="text" default="[%m/%d]" filter="raw" label="PLG_CONTENT_READLESSTEXT_DATE_FORMAT" description="PLG_CONTENT_READLESSTEXT_DATE_FORMAT_DESCRIPTION"></field>
+      </fieldset>
+
+      <fieldset name="suffix">
+        <field name="addSuffix" type="list" default="when_active_use_article_manager_option" filter="word" label="PLG_CONTENT_READLESSTEXT_ADD_SUFFIX" description="PLG_CONTENT_READLESSTEXT_ADD_SUFFIX_DESCRIPTION">
+          <option value="no">JNO</option>
+          <option value="when_active">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE</option>
+          <option value="when_active_use_article_manager_option">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE_USE_ARTICLE_MANAGER_OPTION</option>
+          <option value="when_shortened">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE_AND_SHORTENED</option>
+        </field>
+        <field name="userSuffix" type="textarea" cols="30" rows="5" default="&lt;p class='readmore'&gt;&lt;a href='{url}'&gt;Read more: {title}&lt;/a>&lt;/p&gt;" filter="raw" label="PLG_CONTENT_READLESSTEXT_USER_SUFFIX" description="PLG_CONTENT_READLESSTEXT_USER_SUFFIX_DESCRIPTION"></field>
+        <field name="userSuffixLinksToFullArticle" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_USER_SUFFIX_LINKS_TO_FULL_ARTICLE" description="PLG_CONTENT_READLESSTEXT_USER_SUFFIX_LINKS_TO_FULL_ARTICLE_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="guestSuffix" type="textarea" cols="30" rows="5" default="&lt;p class='readmore'&gt;&lt;a href='{url}'&gt;Read more: {title}&lt;/a>&lt;/p&gt;" filter="raw" label="PLG_CONTENT_READLESSTEXT_GUEST_SUFFIX" description="PLG_CONTENT_READLESSTEXT_GUEST_SUFFIX_DESCRIPTION"></field>
+        <field name="guestSuffixLinksToFullArticle" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_GUEST_SUFFIX_LINKS_TO_FULL_ARTICLE" description="PLG_CONTENT_READLESSTEXT_GUEST_SUFFIX_LINKS_TO_FULL_ARTICLE_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="suffixDateFormat" type="text" default="[%m/%d]" filter="raw" label="PLG_CONTENT_READLESSTEXT_DATE_FORMAT" description="PLG_CONTENT_READLESSTEXT_DATE_FORMAT_DESCRIPTION"></field>
+      </fieldset>      
+
+      <fieldset name="formatting">
+        <field name="translateAdditions" type="radio" default="0" filter="integer" label="PLG_CONTENT_READLESSTEXT_TRANSLATE_ADDITIONS" description="PLG_CONTENT_READLESSTEXT_TRANSLATE_ADDITIONS_DESCRIPTION">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>      
+        <field name="extraSelfClosingTags" type="text" default="br, hr, img" filter="string" label="PLG_CONTENT_READLESSTEXT_EXTRA_SELF_CLOSING_TAGS" description="PLG_CONTENT_READLESSTEXT_EXTRA_SELF_CLOSING_TAGS_DESCRIPTION"></field>
+        <field name="" type="spacer" hr="false"></field>
+        <field name="applyFormatting" type="list" default="when_active" filter="word" label="PLG_CONTENT_READLESSTEXT_APPLY_FORMATTING" description="PLG_CONTENT_READLESSTEXT_APPLY_FORMATTING_DESCRIPTION">
+          
+          <option value="when_active">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE</option>
+          <option value="when_long_enough">PLG_CONTENT_READLESSTEXT_ALLOWED_WHEN_ACTIVE_AND_LONG_ENOUGH</option>
+        </field>
+        <field name="tagsToRemove" type="text" default="img" filter="string" label="PLG_CONTENT_READLESSTEXT_TAGS_TO_REMOVE" description="PLG_CONTENT_READLESSTEXT_TAGS_TO_REMOVE_DESCRIPTION"></field>
+        <field name="tagsToRemoveWithContents" type="text" default="style, nav, menu, footer, script, head, form, noscript" filter="string" label="PLG_CONTENT_READLESSTEXT_TAGS_TO_REMOVE_WITH_CONTENTS" description="PLG_CONTENT_READLESSTEXT_TAGS_TO_REMOVE_WITH_CONTENTS_DESCRIPTION"></field>
+        <field name="squareTokensToRemoveWithContents" type="text" default="" filter="string" label="PLG_CONTENT_READLESSTEXT_SQUARE_TOKENS_TO_REMOVE_WITH_CONTENTS" description="PLG_CONTENT_READLESSTEXT_SQUARE_TOKENS_TO_REMOVE_WITH_CONTENTS_DESCRIPTION"></field>
+        <field name="curlyTokensToRemoveWithContents" type="text" default="" filter="string" label="PLG_CONTENT_READLESSTEXT_CURLY_TOKENS_TO_REMOVE_WITH_CONTENTS" description="PLG_CONTENT_READLESSTEXT_CURLY_TOKENS_TO_REMOVE_WITH_CONTENTS_DESCRIPTION"></field>
+      </fieldset>
+    </fields>
+  </config>
+
+  <files>
+    <filename plugin="readlesstext">readlesstext.php</filename>
+    <folder>language</folder>
+  </files>
+  
+  <scriptfile>script.php</scriptfile>
+
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_content_readlesstext.sys.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_content_readlesstext.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.plg_content_readlesstext.sys.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.plg_content_readlesstext.ini</language>
+  </languages>
+
+</extension>

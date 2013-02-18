@@ -1,0 +1,471 @@
+html{
+	overflow-y: scroll;	
+}
+
+div.align_left{
+	text-align: left;
+}
+
+table#toolbar{
+	height: 52px;
+}
+
+span.editlinktip{
+	border-bottom: 1px dashed #ccc;
+}
+
+div#config_link{
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+div#ua_footer{
+	text-align: center;
+	margin-top: 100px;
+}
+
+.sidestep{
+	float: left; 
+	width: 210px;	
+}
+
+.sidestep2{
+	float: left; 
+	width: 400px;	
+}
+
+.checkbox{
+	margin-bottom: -1px;
+}
+
+#pages, #itemtypes, #workflow, #components, #toolbars{
+	display: none;	
+}
+
+/* menu tabs */
+
+ul#am_menu{
+	margin: 0 0 30px 0;
+	padding: 0 0 0 20px;
+	overflow: hidden;
+	background: url(../images/am_tabs_bg.gif) repeat-x bottom;	
+	font-size: 11px;	
+}
+
+ul#am_menu li{	
+	margin-right: 3px;
+	float: left;
+	list-style-type: none;
+}
+
+ul#am_menu a{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;	
+	background: url(../images/am_tab_off.gif) no-repeat top right;
+	display: block;
+	
+}
+
+ul#am_menu a span{	
+	background: url(../images/am_tab_off_left.gif) no-repeat top left;	
+	display: block;
+	padding: 3px 10px;
+}
+
+ul#am_menu .on{
+	background: url(../images/am_tab_on.gif) no-repeat top right;
+}
+
+ul#am_menu a.on:link, ul#am_menu a.on:visited, ul#am_menu a.on:active, ul#am_menu a.on:hover{
+	color: black;
+	text-decoration: none;
+}
+
+ul#am_menu a.on span{	
+	background: url(../images/am_tab_on_left.gif) no-repeat top left;	
+}
+
+#general_settings, #url_access, #item_access, #module_access, #category_access, workflow, #component_access, #menu_access, #part_access, #paid_content{
+	display: none;
+}
+
+ul, p{
+	/*
+	text-align: left;
+	*/
+}
+
+.align_right{
+	text-align: right;
+}
+
+.extra_button_field{
+	width: 650px;
+	height: 200px;
+}
+
+.row{
+	margin-bottom: 10px;
+}
+
+.componentfield{
+	width: 200px;
+}
+
+.url_field{
+	width: 600px;
+}
+
+.warning_img{
+	margin-left: 50px;
+	margin-right: 5px;
+}
+
+.am_wrapper{
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.css_input{
+	width: 200px;
+}
+
+table.adminlist tbody tr.row1:hover td, table.adminlist tbody tr.row0:hover td{ 
+	background-color: #D7FCBC; 
+}
+
+table.adminlist tbody tr td, table.adminlist tbody tr.row1 td{
+	border: 0;
+	padding-top: 10px;
+}
+
+.sidestep{
+	float: left; 
+	width: 180px;
+	white-space: nowrap;
+}
+
+.sidestep2{
+	float: left; 
+	width: 360px;
+	white-space: nowrap;
+}
+
+th{	
+	text-align: left;
+	background: #F0F0F0;
+	border-bottom: 1px solid #999999;	
+}
+
+td{
+	vertical-align: top;
+}
+
+.long_text_field{
+	width: 400px;
+}
+
+#td_accesslevel_selector{	
+	white-space: nowrap;	
+	text-align: right;	
+	width: 100px;	
+	vertical-align: bottom;
+}
+
+.valign_bottom{
+	vertical-align: bottom;
+}
+
+.reverse_warning{
+	margin-bottom: 0;
+}
+
+#am_subheader{
+	width: 100%;
+}
+
+.column_ids{
+	width: 15px;
+	white-space: nowrap;
+	text-align: right;
+}
+
+.hasTip{
+	border-bottom: 1px dashed #cccccc;	
+}
+
+form label{
+	width: auto;
+	display: inline;
+	float: none;
+	font-size: 100%;
+	clear: auto;
+}
+
+#am_subheader p, #am_subheader_users p{
+	margin-left: 0;
+}
+
+div#element-box div.m form table.adminlist tr td a{
+	font-size: 100%;
+}
+
+#am_header_messages div{
+	padding-left: 4px;
+}
+
+#version_checker_spinner{
+	display: none;
+}
+
+.am_superscript{
+	color: #cc0000;
+	padding-left: 5px;		
+}
+
+table.adminlist tbody tr td.has_superscript, table.adminlist tbody tr.row1 td.has_superscript{
+	padding-top: 7px;
+}
+
+.am_red{
+	color: #cc0000;
+}
+
+#ua_footer table{
+	width: 600px; 
+	margin: 0 auto; 	
+}
+
+#ua_footer table td{
+	text-align: left;	
+	width: 300px;
+	white-space: nowrap;
+}
+
+#ua_footer table td.text_right{
+	text-align: right;	
+}
+
+#ua_footer table td.five_pix{
+	width: 3px;
+	text-align: center;
+}
+
+.icon-48-am_icon{
+	background-image: url('../images/icon.png');
+}
+
+div.pagetitle{
+	height: 52px;
+}
+
+.am_textarea_code{
+	width: 800px;
+	height: 160px;
+}
+
+.am_green{
+	/*color: #59C807;*/
+	color: green;/*same color as Joomla green text. see system info > dirs*/
+}
+
+/*
+.am_dot_green{
+	background: url('../images/dot_green.png') 0 3px no-repeat;	
+}
+
+.am_dot_red{
+	background: url('../images/dot_red.png') 0 3px no-repeat;	
+}
+*/
+
+/*
+.am_dot{
+	font-size: 14px;
+	line-height: 10px;
+}
+
+
+
+.am_black{
+	color: #000;
+}
+*/
+
+#cpanel img{
+	margin: 0 30px 0 30px;	
+}
+
+#cpanel fieldset{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.am_pagetitle{
+	color: #146295;
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+/* SUCKERFISH DROPDOWN MENU*/
+
+/*
+ul#submenu { 
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+	z-index: 101;
+}
+*/
+
+#submenu li a{
+	display: block;	
+	padding: 0 15px 3px 15px;	
+}
+
+
+#submenu li ul { /* second-level lists */
+	position: absolute;	
+	width: 15em;
+	left: -999em; 
+	padding: 0;
+	margin: 0;
+	z-index: 101;
+	border: 1px solid #ccc;
+	list-style: none;	
+	background: #F6F6F6 url('../images/bg_menu.gif') repeat-y left;	
+}
+
+#submenu li:hover ul, #submenu li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+}
+
+#submenu ul li {
+	width: 15em;		
+	float: left;	
+	list-style-type: none;
+	border-top: 1px solid transparent;	
+	border-bottom: 1px solid transparent;	
+}
+
+
+#submenu ul a{
+	display: block;		
+	line-height: 1.2em;	
+	border-left: 1px solid #D8D8D8;
+	border-right: 1px solid #F6F6F6;
+	width: 15em;/* width needed for stupid IE6 */	
+	background-repeat: no-repeat;
+	background-position: 2px 3px;	
+	padding: 5px 25px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 1em;
+	color: #333;
+	height: auto;
+}
+
+html>body #submenu ul a{
+	width: auto;/* undo IE6 stupid need for width */
+}
+
+#submenu li:hover{	
+	border-color: #025a8d;
+}
+
+#submenu ul li.on{	
+	border-color: #transparent;
+}
+
+
+#submenu ul a:hover{	
+	background-repeat: no-repeat;
+	background-position: 2px 3px;	
+	background-color: #dbe4e9;
+	border-left: 1px solid #025a8d;	
+	border-right: 1px solid #025a8d;	
+	margin: 0;
+	color: #333;
+}
+
+#submenu ul a.active{	
+	background-repeat: no-repeat;
+	background-position: 2px 3px;	
+	background-color: #dbe4e9;
+	border-left: 1px solid transparent;	
+	border-right: 1px solid transparent;	
+	margin: 0;
+	color: #333;
+}
+
+body table.adminlist tbody td.access_selects table{
+	border: 0;
+	margin: 0;
+	padding: 0;	
+	height: 16px;
+	border-spacing: 0;
+}
+
+body table.adminlist tbody td.access_selects table td{
+	width: 22px;
+	padding: 0;
+	height: 16px;	
+	background-repeat: no-repeat;
+	background-position: 0 1px;		
+}
+
+body table.adminlist tbody td.access_selects table td.am_i{
+	background-image: url('../images/right_inherit.gif');	
+}
+
+body table.adminlist tbody td.access_selects table td.am_a{
+	background-image: url('../images/right_allow.gif');	
+}
+
+body table.adminlist tbody td.access_selects table td.am_d{
+	background-image: url('../images/right_deny.gif');	
+}
+
+body table.adminlist tbody td.access_selects table td.target{
+	padding-top: 1px;	
+	white-space: nowrap;
+}
+
+#cpanel div.icon span.panel, #cpanel div.icon span.panel_active, #cpanel div.icon span.panel_notinfreeversion, #cpanel div.icon span.panel_active_notinfreeversion{
+	display: block;
+	width: auto;
+	overflow: hidden;
+	background-image: url('../images/checkbox_off.gif');
+	background-repeat: no-repeat;
+	background-position: 85px 25px;	
+}
+
+#cpanel div.icon span.panel_active{
+	background-image: url('../images/checkbox_on.gif');
+}
+
+#cpanel div.icon span.panel_notinfreeversion, #cpanel div.icon span.panel_active_notinfreeversion{
+	background-image: url('../images/checkbox_red.gif');
+}
+
+#cpanel span.panel_subtitle{
+	font-weight: normal;
+	color: #000;
+	display: inline;
+	font-size: 0.8em;	
+}
+
+.am_width22{
+	width: 15px;
+	margin: 0;
+	padding: 0;
+}
+
+.amm_icon img{
+	margin-right: 5px;
+}
+
+
+
+

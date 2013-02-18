@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6" method="upgrade">
+    <name>COM_ACCESSMANAGER</name>
+    <creationDate>October 2012</creationDate>
+    <author>Carsten Engel</author>
+    <copyright>Copyright 2012 (C) Carsten Engel - Engelweb. All rights reserved.</copyright>
+    <authorEmail></authorEmail>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorUrl>www.pages-and-items.com</authorUrl>
+    <version>1.3.1</version>
+    <description>COM_ACCESSMANAGER_XML_DESCRIPTION</description>		
+	<files folder="site">	
+		
+		<folder>views</folder>	       
+		
+		<filename>checkaccess.php</filename>
+		<filename>checkaccess2.php</filename>		
+		<filename>controller.php</filename>
+		<filename>accessmanager.php</filename>
+		<filename>index.html</filename>				
+		<filename>router.php</filename>					
+			
+	</files>
+	
+	<languages folder="site">	
+		<language tag="af-ZA">language/af-ZA.com_accessmanager.ini</language>
+		<language tag="ar-EG">language/ar-EG.com_accessmanager.ini</language>
+		<language tag="be-BE">language/be-BE.com_accessmanager.ini</language>
+		<language tag="bg-BG">language/bg-BG.com_accessmanager.ini</language>
+		<language tag="ca-ES">language/ca-ES.com_accessmanager.ini</language>
+		<language tag="cs-CZ">language/cs-CZ.com_accessmanager.ini</language>
+		<language tag="cy-GB">language/cy-GB.com_accessmanager.ini</language>
+		<language tag="da-DK">language/da-DK.com_accessmanager.ini</language>
+		<language tag="de-DE">language/de-DE.com_accessmanager.ini</language>
+		<language tag="el-GR">language/el-GR.com_accessmanager.ini</language>
+		<language tag="en-GB">language/en-GB.com_accessmanager.ini</language>
+		<language tag="es-ES">language/es-ES.com_accessmanager.ini</language>
+		<language tag="et-EE">language/et-EE.com_accessmanager.ini</language>
+		<language tag="fa-IR">language/fa-IR.com_accessmanager.ini</language>
+		<language tag="fi-FI">language/fi-FI.com_accessmanager.ini</language>
+		<language tag="fr-FR">language/fr-FR.com_accessmanager.ini</language>
+		<language tag="ga-IE">language/ga-IE.com_accessmanager.ini</language>
+		<language tag="gl-ES">language/gl-ES.com_accessmanager.ini</language>
+		<language tag="he-IL">language/he-IL.com_accessmanager.ini</language>
+		<language tag="hi-IN">language/hi-IN.com_accessmanager.ini</language>
+		<language tag="hr-HR">language/hr-HR.com_accessmanager.ini</language>
+		<language tag="ht-NG">language/ht-NG.com_accessmanager.ini</language>
+		<language tag="hu-HU">language/hu-HU.com_accessmanager.ini</language>
+		<language tag="id-ID">language/id-ID.com_accessmanager.ini</language>
+		<language tag="is-IS">language/is-IS.com_accessmanager.ini</language>
+		<language tag="it-IT">language/it-IT.com_accessmanager.ini</language>
+		<language tag="ja-JP">language/ja-JP.com_accessmanager.ini</language>
+		<language tag="ko-KR">language/ko-KR.com_accessmanager.ini</language>
+		<language tag="lt-LT">language/lt-LT.com_accessmanager.ini</language>
+		<language tag="lv-LV">language/lv-LV.com_accessmanager.ini</language>
+		<language tag="mk-MK">language/mk-MK.com_accessmanager.ini</language>
+		<language tag="ms-MY">language/ms-MY.com_accessmanager.ini</language>
+		<language tag="mt-MT">language/mt-MT.com_accessmanager.ini</language>
+		<language tag="nl-NL">language/nl-NL.com_accessmanager.ini</language>
+		<language tag="no-NO">language/no-NO.com_accessmanager.ini</language>
+		<language tag="pl-PL">language/pl-PL.com_accessmanager.ini</language>
+		<language tag="pt-BR">language/pt-BR.com_accessmanager.ini</language>
+		<language tag="pt-PT">language/pt-PT.com_accessmanager.ini</language>
+		<language tag="ro-RO">language/ro-RO.com_accessmanager.ini</language>
+		<language tag="ru-RU">language/ru-RU.com_accessmanager.ini</language>
+		<language tag="sk-SK">language/sk-SK.com_accessmanager.ini</language>
+		<language tag="sl-SI">language/sl-SI.com_accessmanager.ini</language>
+		<language tag="sq-AL">language/sq-AL.com_accessmanager.ini</language>
+		<language tag="sr-RS">language/sr-RS.com_accessmanager.ini</language>
+		<language tag="sv-SE">language/sv-SE.com_accessmanager.ini</language>
+		<language tag="sw-TZ">language/sw-TZ.com_accessmanager.ini</language>
+		<language tag="th-TH">language/th-TH.com_accessmanager.ini</language>
+		<language tag="tl-PH">language/tl-PH.com_accessmanager.ini</language>
+		<language tag="tr-TR">language/tr-TR.com_accessmanager.ini</language>
+		<language tag="uk-UA">language/uk-UA.com_accessmanager.ini</language>
+		<language tag="vi-VN">language/vi-VN.com_accessmanager.ini</language>
+		<language tag="yi-IL">language/yi-IL.com_accessmanager.ini</language>
+		<language tag="zh-CN">language/zh-CN.com_accessmanager.ini</language>
+		<language tag="zh-TW">language/zh-TW.com_accessmanager.ini</language>
+	</languages>
+	    
+    <administration>  
+		<menu img="components/com_accessmanager/images/icon.gif">COM_ACCESSMANAGER</menu>
+		<submenu>			
+			<menu link="option=com_accessmanager&amp;view=configuration" view="configuration"  img="components/com_accessmanager/images/menu/accessmanager_configuration.png" 
+				alt="Configuration">COM_ACCESSMANAGER_CONFIG</menu>
+			<menu link="option=com_accessmanager&amp;view=users" view="users" img="components/com_accessmanager/images/menu/accessmanager_users.png"
+				alt="Users">COM_ACCESSMANAGER_USERS</menu>
+			<menu link="option=com_accessmanager&amp;view=accessvievving" view="accessvievving" img="components/com_accessmanager/images/menu/accessmanager_components.png" 
+				alt="Frontend">COM_ACCESSMANAGER_ACCESS_VIEWING</menu>
+			<menu link="option=com_accessmanager&amp;view=accessedit" view="accessedit" img="components/com_accessmanager/images/menu/accessmanager_components.png" 
+				alt="Backend">COM_ACCESSMANAGER_ACCESS_EDITTING</menu>				
+			<menu link="option=com_accessmanager&amp;view=tools" view="tools" img="components/com_accessmanager/images/menu/accessmanager_configuration.png" 				alt="Tools">COM_ACCESSMANAGER_TOOLS</menu>
+			<menu link="option=com_accessmanager&amp;view=info" view="info" img="components/com_accessmanager/images/menu/accessmanager_info.png" 
+				alt="Info">COM_ACCESSMANAGER_INFO</menu>						
+		</submenu>     
+		<languages folder="admin">
+			<language tag="af-ZA">language/af-ZA.com_accessmanager.ini</language>
+			<language tag="af-ZA">language/af-ZA.com_accessmanager.sys.ini</language>
+			<language tag="ar-EG">language/ar-EG.com_accessmanager.ini</language>
+			<language tag="ar-EG">language/ar-EG.com_accessmanager.sys.ini</language>
+			<language tag="be-BE">language/be-BE.com_accessmanager.ini</language>
+			<language tag="be-BE">language/be-BE.com_accessmanager.sys.ini</language>
+			<language tag="bg-BG">language/bg-BG.com_accessmanager.ini</language>
+			<language tag="bg-BG">language/bg-BG.com_accessmanager.sys.ini</language>
+			<language tag="ca-ES">language/ca-ES.com_accessmanager.ini</language>
+			<language tag="ca-ES">language/ca-ES.com_accessmanager.sys.ini</language>
+			<language tag="cs-CZ">language/cs-CZ.com_accessmanager.ini</language>
+			<language tag="cs-CZ">language/cs-CZ.com_accessmanager.sys.ini</language>
+			<language tag="cy-GB">language/cy-GB.com_accessmanager.ini</language>
+			<language tag="cy-GB">language/cy-GB.com_accessmanager.sys.ini</language>
+			<language tag="da-DK">language/da-DK.com_accessmanager.ini</language>
+			<language tag="da-DK">language/da-DK.com_accessmanager.sys.ini</language>
+			<language tag="de-DE">language/de-DE.com_accessmanager.ini</language>
+			<language tag="de-DE">language/de-DE.com_accessmanager.sys.ini</language>
+			<language tag="el-GR">language/el-GR.com_accessmanager.ini</language>
+			<language tag="el-GR">language/el-GR.com_accessmanager.sys.ini</language>
+			<language tag="en-GB">language/en-GB.com_accessmanager.ini</language>
+			<language tag="en-GB">language/en-GB.com_accessmanager.sys.ini</language>
+			<language tag="es-ES">language/es-ES.com_accessmanager.ini</language>
+			<language tag="es-ES">language/es-ES.com_accessmanager.sys.ini</language>
+			<language tag="et-EE">language/et-EE.com_accessmanager.ini</language>
+			<language tag="et-EE">language/et-EE.com_accessmanager.sys.ini</language>
+			<language tag="fa-IR">language/fa-IR.com_accessmanager.ini</language>
+			<language tag="fa-IR">language/fa-IR.com_accessmanager.sys.ini</language>
+			<language tag="fi-FI">language/fi-FI.com_accessmanager.ini</language>
+			<language tag="fi-FI">language/fi-FI.com_accessmanager.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_accessmanager.ini</language>
+			<language tag="fr-FR">language/fr-FR.com_accessmanager.sys.ini</language>
+			<language tag="ga-IE">language/ga-IE.com_accessmanager.ini</language>
+			<language tag="ga-IE">language/ga-IE.com_accessmanager.sys.ini</language>
+			<language tag="gl-ES">language/gl-ES.com_accessmanager.ini</language>
+			<language tag="gl-ES">language/gl-ES.com_accessmanager.sys.ini</language>
+			<language tag="he-IL">language/he-IL.com_accessmanager.ini</language>
+			<language tag="he-IL">language/he-IL.com_accessmanager.sys.ini</language>
+			<language tag="hi-IN">language/hi-IN.com_accessmanager.ini</language>
+			<language tag="hi-IN">language/hi-IN.com_accessmanager.sys.ini</language>
+			<language tag="hr-HR">language/hr-HR.com_accessmanager.ini</language>
+			<language tag="hr-HR">language/hr-HR.com_accessmanager.sys.ini</language>
+			<language tag="ht-NG">language/ht-NG.com_accessmanager.ini</language>
+			<language tag="ht-NG">language/ht-NG.com_accessmanager.sys.ini</language>
+			<language tag="hu-HU">language/hu-HU.com_accessmanager.ini</language>
+			<language tag="hu-HU">language/hu-HU.com_accessmanager.sys.ini</language>
+			<language tag="id-ID">language/id-ID.com_accessmanager.ini</language>
+			<language tag="id-ID">language/id-ID.com_accessmanager.sys.ini</language>
+			<language tag="is-IS">language/is-IS.com_accessmanager.ini</language>
+			<language tag="is-IS">language/is-IS.com_accessmanager.sys.ini</language>
+			<language tag="it-IT">language/it-IT.com_accessmanager.ini</language>
+			<language tag="it-IT">language/it-IT.com_accessmanager.sys.ini</language>
+			<language tag="ja-JP">language/ja-JP.com_accessmanager.ini</language>
+			<language tag="ja-JP">language/ja-JP.com_accessmanager.sys.ini</language>
+			<language tag="ko-KR">language/ko-KR.com_accessmanager.ini</language>
+			<language tag="ko-KR">language/ko-KR.com_accessmanager.sys.ini</language>
+			<language tag="lt-LT">language/lt-LT.com_accessmanager.ini</language>
+			<language tag="lt-LT">language/lt-LT.com_accessmanager.sys.ini</language>
+			<language tag="lv-LV">language/lv-LV.com_accessmanager.ini</language>
+			<language tag="lv-LV">language/lv-LV.com_accessmanager.sys.ini</language>
+			<language tag="mk-MK">language/mk-MK.com_accessmanager.ini</language>
+			<language tag="mk-MK">language/mk-MK.com_accessmanager.sys.ini</language>
+			<language tag="ms-MY">language/ms-MY.com_accessmanager.ini</language>
+			<language tag="ms-MY">language/ms-MY.com_accessmanager.sys.ini</language>
+			<language tag="mt-MT">language/mt-MT.com_accessmanager.ini</language>
+			<language tag="mt-MT">language/mt-MT.com_accessmanager.sys.ini</language>
+			<language tag="nl-NL">language/nl-NL.com_accessmanager.ini</language>
+			<language tag="nl-NL">language/nl-NL.com_accessmanager.sys.ini</language>
+			<language tag="no-NO">language/no-NO.com_accessmanager.ini</language>
+			<language tag="no-NO">language/no-NO.com_accessmanager.sys.ini</language>
+			<language tag="pl-PL">language/pl-PL.com_accessmanager.ini</language>
+			<language tag="pl-PL">language/pl-PL.com_accessmanager.sys.ini</language>
+			<language tag="pt-BR">language/pt-BR.com_accessmanager.ini</language>
+			<language tag="pt-BR">language/pt-BR.com_accessmanager.sys.ini</language>
+			<language tag="pt-PT">language/pt-PT.com_accessmanager.ini</language>
+			<language tag="pt-PT">language/pt-PT.com_accessmanager.sys.ini</language>			
+			<language tag="ro-RO">language/ro-RO.com_accessmanager.ini</language>
+			<language tag="ro-RO">language/ro-RO.com_accessmanager.sys.ini</language>
+			<language tag="ru-RU">language/ru-RU.com_accessmanager.ini</language>
+			<language tag="ru-RU">language/ru-RU.com_accessmanager.sys.ini</language>
+			<language tag="sk-SK">language/sk-SK.com_accessmanager.ini</language>
+			<language tag="sk-SK">language/sk-SK.com_accessmanager.sys.ini</language>
+			<language tag="sl-SI">language/sl-SI.com_accessmanager.ini</language>
+			<language tag="sl-SI">language/sl-SI.com_accessmanager.sys.ini</language>
+			<language tag="sq-AL">language/sq-AL.com_accessmanager.ini</language>
+			<language tag="sq-AL">language/sq-AL.com_accessmanager.sys.ini</language>
+			<language tag="sr-RS">language/sr-RS.com_accessmanager.ini</language>
+			<language tag="sr-RS">language/sr-RS.com_accessmanager.sys.ini</language>
+			<language tag="sv-SE">language/sv-SE.com_accessmanager.ini</language>
+			<language tag="sv-SE">language/sv-SE.com_accessmanager.sys.ini</language>
+			<language tag="sw-TZ">language/sw-TZ.com_accessmanager.ini</language>
+			<language tag="sw-TZ">language/sw-TZ.com_accessmanager.sys.ini</language>
+			<language tag="th-TH">language/th-TH.com_accessmanager.ini</language>
+			<language tag="th-TH">language/th-TH.com_accessmanager.sys.ini</language>
+			<language tag="tl-PH">language/tl-PH.com_accessmanager.ini</language>
+			<language tag="tl-PH">language/tl-PH.com_accessmanager.sys.ini</language>
+			<language tag="tr-TR">language/tr-TR.com_accessmanager.ini</language>
+			<language tag="tr-TR">language/tr-TR.com_accessmanager.sys.ini</language>
+			<language tag="uk-UA">language/uk-UA.com_accessmanager.ini</language>
+			<language tag="uk-UA">language/uk-UA.com_accessmanager.sys.ini</language>
+			<language tag="vi-VN">language/vi-VN.com_accessmanager.ini</language>
+			<language tag="vi-VN">language/vi-VN.com_accessmanager.sys.ini</language>
+			<language tag="yi-IL">language/yi-IL.com_accessmanager.ini</language>
+			<language tag="yi-IL">language/yi-IL.com_accessmanager.sys.ini</language>			
+			<language tag="zh-CN">language/zh-CN.com_accessmanager.ini</language>
+			<language tag="zh-CN">language/zh-CN.com_accessmanager.sys.ini</language>
+			<language tag="zh-TW">language/zh-TW.com_accessmanager.ini</language>
+			<language tag="zh-TW">language/zh-TW.com_accessmanager.sys.ini</language>		
+		</languages> 		
+		<files folder="admin">	
+				
+			<folder>css</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>javascript</folder>	
+			<folder>language</folder>				
+			<folder>models</folder>			
+			<folder>plugin_search_categories</folder>	
+			<folder>plugin_search_content</folder>
+			<folder>plugin_system</folder>		
+			<folder>views</folder>
+						
+			<filename>accessmanager.php</filename>
+			<filename>config.xml</filename>	
+			<filename>controller.php</filename>
+			<filename>index.html</filename>			
+									
+		</files>
+		<files>
+			<filename>install.script.php</filename>		
+		</files>		
+	</administration>	
+	<scriptfile>install.script.php</scriptfile>	
+	<installfile>install.accessmanager.php</installfile>
+	<uninstallfile>uninstall.accessmanager.php</uninstallfile>	
+</extension>

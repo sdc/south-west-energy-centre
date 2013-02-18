@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../../fonts/bebas-neue-fontfacekit/BebasNeue-webfont.eot');
+    src: url('../../fonts/bebas-neue-fontfacekit/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/bebas-neue-fontfacekit/BebasNeue-webfont.woff') format('woff'),
+         url('../../fonts/bebas-neue-fontfacekit/BebasNeue-webfont.ttf') format('truetype'),
+         url('../../fonts/bebas-neue-fontfacekit/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CaviarDreamsBold';
+    src: url('../../fonts/Caviar-Dreams-fontfacekit/CaviarDreams_Bold-webfont.eot');
+    src: url('../../fonts/Caviar-Dreams-fontfacekit/CaviarDreams_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Caviar-Dreams-fontfacekit/CaviarDreams_Bold-webfont.woff') format('woff'),
+         url('../../fonts/Caviar-Dreams-fontfacekit/CaviarDreams_Bold-webfont.ttf') format('truetype'),
+         url('../../fonts/Caviar-Dreams-fontfacekit/CaviarDreams_Bold-webfont.svg#CaviarDreamsBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LillyRegular';
+    src: url('../../fonts/Lilly-fontfacekit/Lilly__-webfont.eot');
+    src: url('../../fonts/Lilly-fontfacekit/Lilly__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Lilly-fontfacekit/Lilly__-webfont.woff') format('woff'),
+         url('../../fonts/Lilly-fontfacekit/Lilly__-webfont.ttf') format('truetype'),
+         url('../../fonts/Lilly-fontfacekit/Lilly__-webfont.svg#LillyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+.nivoSlider {
+
+	position:relative;
+
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+
+
+}
+
+.nivoSlider img {
+
+	position:absolute;
+
+	top:0px;
+
+	left:0px;
+
+	display:none;
+
+}
+
+.nivoSlider a {
+
+	border:0;
+
+	display:block;
+
+}

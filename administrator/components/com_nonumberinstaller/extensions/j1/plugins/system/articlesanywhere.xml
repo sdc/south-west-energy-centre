@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install version="1.5" type="plugin" group="system">
+	<name>System - Articles Anywhere</name>
+	<description>PLG_SYSTEM_ARTICLESANYWHERE_DESC</description>
+	<version>2.4.6FREE</version>
+	<creationDate>October 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="articlesanywhere">articlesanywhere.php</filename>
+		<folder>articlesanywhere</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nnframework/fields">
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_articlesanywhere" />
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="com_menus" />
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="com_content" />
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="" admin="0" />
+		<param name="@license" type="nn_license" extension="ARTICLES_ANYWHERE" />
+		<param name="@version" type="nn_version" extension="ARTICLES_ANYWHERE" xml="/plugins/system/articlesanywhere.xml" />
+		<param name="@header" type="nn_header"
+			label="ARTICLES_ANYWHERE"
+			description="ARTICLES_ANYWHERE_DESC"
+			xml="/plugins/system/articlesanywhere.xml"
+			language_file="plg_system_articlesanywhere"
+			image="/plugins/system/articlesanywhere/images/logo.png"
+			image_w="120" image_h="160"
+			url="http://www.nonumber.nl/articlesanywhere"
+			help_url="http://www.nonumber.nl/articlesanywhere" />
+
+		<param name="@block_tag_a" type="nn_block" start="1" label="NN_TAG_SYNTAX" />
+		<param name="article_tag" type="text" default="article" label="AA_TAG" description="AA_TAG_DESC" />
+		<param name="@notice_articles_tag" type="nn_plaintext" label="AA_TAG2" description="AA_TAG2_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<param name="@block_tag_b" type="nn_block" end="1" />
+
+		<param name="@block_behavior_a" type="nn_block" start="1" label="NN_BEHAVIOR" />
+		<param name="@notice_limit" type="nn_plaintext" label="AA_LIMIT" description="AA_LIMIT_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<param name="@notice_ordering" type="nn_plaintext" label="ARTICLE ORDER" description="AA_ORDERING_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<param name="@notice_ordering_direction" type="nn_plaintext" label="NN_DIRECTION" description="NN_DIRECTION_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<param name="ignore_access" type="radio" default="0" label="AA_IGNORE_ARTICLE_ACCESS" description="AA_IGNORE_ARTICLE_ACCESS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</param>
+		<param name="ignore_state" type="radio" default="0" label="AA_IGNORE_ARTICLE_STATE" description="AA_IGNORE_ARTICLE_STATE_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="use_ellipsis" type="radio" default="1" label="AA_USE_ELLIPSIS" description="AA_USE_ELLIPSIS_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="place_comments" type="radio" default="1" label="NN_PLACE_HTML_COMMENTS" description="NN_PLACE_HTML_COMMENTS_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="run_content_plugins" type="radio" default="1" label="AA_RUN_CONTENT_PLUGINS" description="AA_RUN_CONTENT_PLUGINS_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="@block_behavior_b" type="nn_block" end="1" />
+
+		<param name="@slide_button" type="nn_slide" label="NN_SETTINGS_SECURITY" />
+		<param name="@block_articles_a" type="nn_block" start="1" label="NN_ARTICLES" description="AA_ARTICLES_DESC" />
+		<param name="@notice_articles" type="nn_plaintext" label="AA_SECURITY_LEVEL" description="AA_SECURITY_LEVEL_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<param name="@block_articles_b" type="nn_block" end="1" />
+
+		<param name="@block_components_a" type="nn_block" start="1" label="NN_COMPONENTS" description="AA_COMPONENTS_DESC" />
+		<param name="@notice_components" type="nn_plaintext" label="NN_DISABLE_ON_COMPONENTS" description="NN_DISABLE_ON_COMPONENTS_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<param name="@block_components_b" type="nn_block" end="1" />
+
+		<param name="@block_otherareas_a" type="nn_block" start="1" label="NN_OTHER_AREAS" description="AA_OTHER_AREAS_DESC" />
+		<param name="@notice_otherareas" type="nn_plaintext" label="NN_ENABLE_OTHER_AREAS" description="NN_ENABLE_OTHER_AREAS_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<param name="@block_otherareas_b" type="nn_block" end="1" />
+
+		<param name="@slide_button" type="nn_slide" label="NN_SETTINGS_EDITOR_BUTTON" />
+		<param name="button_text" type="text" default="Insert Article" label="NN_BUTTON_TEXT" description="NN_BUTTON_TEXT_DESC" />
+		<param name="button_icon" type="radio" default="1" label="NN_SHOW_ICON" description="NN_SHOW_ICON_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="enable_frontend" type="radio" default="1" label="NN_ENABLE_IN_FRONTEND" description="NN_ENABLE_IN_FRONTEND_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+
+		<param name="@block_tag_a" type="nn_block" start="1" label="AA_DEFAULT_DATA_TAG_SETTINGS" description="AA_DEFAULT_DATA_TAG_SETTINGS_DESC" />
+		<param name="data_title_enable" type="radio" default="1" label="AA_ENABLE_TITLE_TAG" description="AA_ENABLE_TITLE_TAG_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+
+		<param name="@hr_data_text" type="nn_hr" />
+
+		<param name="data_text_enable" type="radio" default="1" label="AA_ENABLE_TEXT_TAG" description="AA_ENABLE_TEXT_TAG_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="@toggler_data_text_a" type="nn_toggler" param="data_text_enable" value="1" />
+		<param name="data_text_type" type="radio" default="text" label="AA_TEXT_TYPE" description="AA_TEXT_TYPE_DESC">
+			<option value="text">AA_ALL_TEXT</option>
+			<option value="introtext">AA_INTRO_TEXT</option>
+			<option value="fulltext">AA_FULL_TEXT</option>
+		</param>
+		<param name="data_text_length" type="text" size="5" default="0" label="AA_MAXIMUM_TEXT_LENGTH" description="AA_MAXIMUM_TEXT_LENGTH_DESC" />
+		<param name="data_text_strip" type="radio" default="0" label="AA_STRIP_HTML_TAGS" description="AA_STRIP_HTML_TAGS_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="@toggler_data_text_b" type="nn_toggler" />
+
+		<param name="@hr_data_readmore" type="nn_hr" />
+
+		<param name="data_readmore_enable" type="radio" default="1" label="AA_ENABLE_READMORE_TAG" description="AA_ENABLE_READMORE_TAG_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="@toggler_data_readmore_a" type="nn_toggler" param="data_readmore_enable" value="1" />
+		<param name="data_readmore_text" type="text" default="" label="AA_READMORE_TEXT" description="AA_READMORE_TEXT_DESC" />
+		<param name="data_readmore_class" type="text" default="" label="AA_CLASSNAME" description="AA_CLASSNAME_DESC" />
+		<param name="@toggler_data_readmore_b" type="nn_toggler" />
+
+		<param name="@hr_data_id" type="nn_hr" />
+
+		<param name="data_id_enable" type="radio" default="0" label="AA_ENABLE_ID_TAG" description="AA_ENABLE_ID_TAG_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+
+		<param name="@hr_div" type="nn_hr" />
+
+		<param name="@notice_div_enable" type="nn_plaintext" label="AA_EMBED_IN_A_DIV" description="AA_EMBED_IN_A_DIV_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+
+		<param name="@hr_content_type" type="nn_hr" />
+
+		<param name="@notice_content_type" type="nn_plaintext" label="AA_CONTENT_TYPE" description="AA_CONTENT_TYPE_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+
+		<param name="@block_tag_b" type="nn_block" end="1" />
+	</params>
+</install>

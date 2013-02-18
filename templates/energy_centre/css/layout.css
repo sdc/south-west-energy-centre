@@ -1,0 +1,121 @@
+/* 
+ * ************** Colour values for stuff ************** 
+ * 
+ * Light blue   : #0088CC
+ * Dark blue    : #005580
+ * Font color   : #434343
+ * 
+ * Backgrounds
+ * Renewable (light green)      : #40b93c (Old -- #E3F3E4)
+ * Efficiency (Light red)       : #ed1c24 (Old -- #FBDADC)
+ * Sustainable (Light blue)     : #DBEAF4
+ * Gas training (Light yellow)  : #FEFCDD
+ * Industry (Pinky)             : #FDE8DE
+*/
+body{background-color:#fff;}
+body p, label{font-size:0.95em!important;line-height:1.4em;}
+body h2 span.subheading-category{font-size:1em;padding:0;}
+body h1{font-size:1.5em;}
+body h2{font-size:1.3em;}
+body h3{font-size:1.1em;}
+h1, h2, h3, h4, h5, h6{color:#2698DE;}
+a:hover{color:#6e6e6e;}
+header#rt-top-surround{background:url("../../../images/template-images/header.gif") no-repeat scroll 0 0 #fff !important;height:185px;width:960px;margin:0 auto;box-shadow:none;border:none;padding-bottom:5px;}
+header#rt-top-surround #rt-top .rt-container a#rt-logo{margin-top:18px;}
+header#rt-top-surround div#rt-header .rt-container .rok_search, header#rt-top-surround div#rt-header .rt-container .social_media_icon{padding:0;text-align:right;}
+a.powered-by{display:none;visibility:hidden;}
+.left{float:left;}
+.right{float:right;}
+#rt-transition, html body.logo-type-custom footer#rt-footer-surround{background-color:#fff!important;}
+#rt-footer-surround div#rt-footer div.rt-container div.rt-grid-12 div.rt-block a.powered-by{background:none;}
+#rt-footer-surround div#rt-footer{background:none;border-top:0px;box-shadow:none;color:#fff;}
+#rt-footer-surround div#rt-footer div.rt-container{background:url("../../../images/template-images/energy-centre-footer.jpg") no-repeat scroll 0 0 transparent;height:65px;text-align:centre;margin:0 auto;width:960px;}
+#rt-footer-surround div#rt-copyright{border-top:0px;box-shadow:none;}
+#rt-footer-surround div#rt-copyright div.rt-container div.rt-grid-12 div.rt-block{padding:0;text-align:center;}
+footer#rt-footer-surround div#rt-footer div.rt-container, footer#rt-footer-surround div#rt-copyright div.rt-container{border-top:2px solid #868787;}
+#rt-sidebar-a .request_form{background:none repeat scroll 0 0 #CEE3F1;margin:10px 0 10px 10px;}
+body.courses #rt-sidebar-a .request_form{padding:15px !important;}
+#rt-sidebar-a .request_form h2, #rt-sidebar-a .request_form h3{font-size:1.1em;line-height:1.1m;}
+#rt-sidebar-a .request_form h3{margin:0 0 15px;}
+#rt-sidebar-a .request_form p.bfSectionDescription{margin:0;display:none;visibility:hidden;}
+.request_form #interested_area span{width:100%;}
+.request_form #interested_area span label{float:left;width:210px;margin-right:15px}
+.request_form #interested_area span input{float:right;width:20px;}
+.request_form #interested_area span.bfCaptcha img#ff_capimgValue.ff_capimg{float:left;}
+.request_form #interested_area span.bfCaptcha input#bfCaptchaEntry.ff_elem{width:196px;float:left;}
+html body.logo-type-custom div#rt-transition div#rt-mainbody-surround div#rt-main.mb8-sa4 div.rt-container div.rt-grid-4 div#rt-sidebar-a div.rt-block div.module-surround div.module-content div.bfClearfix div#ff_formdiv1 div.bfPage-l div.bfPage-r div.bfPage-m form#ff_form1.bfQuickMode div#bfPage1.bfPage div#interested_area.bfNoSection p#bfElemWrap99.bfElemWrap span.bfCaptcha a.ff_elem{float:left;width:40px;}
+ul#tabs.nav li a{height:74px;}
+ul#tabs.nav li .right{margin-left:6px;}
+html body.home #my-tab-content .tab-pane ul, body.home #my-tab-content .tab-pane ul li a{padding:10px;color:#fff;}
+ul#tabs.nav li a{font-size:90%;text-align:center;line-height:1.3em;color:#333;padding:10px;}
+ul#tabs.nav li a
+ul#tabs.nav li a img{padding-bottom:8px;}
+ul#tabs li:first-child{padding-left:10px;}
+ul#tabs{margin-bottom:0px;border-bottom:0px;}
+div#my-tab-content div.tab-pane{border-radius:5px;margin-top:1px;}
+ul#tabs.nav li.active{color:#000;}
+ul#tabs.nav li.active a.renewable, .home #my-tab-content.tab-content #renewable.tab-pane,#renewable{background-color:#40B93C;color:#fff;}
+ul#tabs.nav li a.renewable, #renewable, #course_list.RenewableTechnology .evenfish{background-color:#E3F3E4;}
+ul#tabs.nav li.active a.efficiency, .home #my-tab-content.tab-content #efficiency.tab-pane{background-color:#ED1C24;color:#fff;}
+ul#tabs.nav li a.efficiency, #efficiency, #course_list.EnergyEfficiency .evenfish{background-color:#FBDADC;}
+ul#tabs.nav li.active a.sustainable, .home #my-tab-content.tab-content #sustainable.tab-pane{background-color:#3871C2;color:#fff;}
+ul#tabs.nav li a.sustainable, #sustainable, #course_list.SustainableConstruction .evenfish{background-color:#DBEAF4;}
+ul#tabs.nav li.active a.gas, .home #my-tab-content.tab-content #gas.tab-pane{background-color:#FFE91A;color:#6E6E6E;}
+ul#tabs.nav li a.gas, #gas, #course_list.GasTrainingAssessment .evenfish{background-color:#FEFCDD;color:#6E6E6E;}
+.home #my-tab-content.tab-content div#gas.tab-pane ul, .home #my-tab-content.tab-content div#gas.tab-pane ul li a{color:#6E6E6E;}
+ul#tabs.nav li.active a.short, .home #my-tab-content.tab-content #short.tab-pane{background-color:#F2511B;color:#fff;}
+ul#tabs.nav li a.short, #industry{background-color:#FDE8DE;}
+html body.logo-type-custom.contact div#rt-transition div#rt-mainbody-surround div#rt-feature div.rt-container{background:none repeat scroll 0 0 #FCE2D6}
+body.news div.item h2{font-size:1.5em;}
+body.news div.blognews div.items-row{border-bottom:1px dotted #3BAA35;}
+body.news div.blognews h2{border-bottom:none;color:#2698DE;}
+body.about h2, body.about a{color:#0E71B9;}
+.menutop li.active.root .item > span, .splitmenu .menutop li.active .item span{background:none repeat scroll 0 0 rgb(245, 245, 245);box-shadow:0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px #FFFFFF inset, 0 1px 2px rgba(0, 0, 0, 0.2);color:#333;text-shadow:none;}
+.menutop li.root > .item > span{background:none repeat scroll 0 0 rgba(64, 185, 60, 1);padding:5px 12px!important;box-shadow:0 0 5px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(173, 173, 173, 0.1);border-right:1px solid #E3F3E4}
+.menutop li{padding-left:5px;}
+.menutop li > .item{color:#fff;}
+#my-tab-content .tab-pane ul li a{font-size:90%;}
+body.courses .rt-block.course_buttons{margin:10px 0;padding:0;float:left;}
+body.courses ul.course_selection{float:left;margin:0;}
+body.courses ul.course_selection li{float:left;list-style-type:none;margin-left:0;}
+body.courses ul.course_selection li a{font-size:1.1em;color:#6e6e6e;}
+body.courses ul.course_selection li#gas.activecolor a{color:#434343;}
+body.courses #course_list #course_title_bar h4{color:#2698DE;}
+.courses ul.course_selection li.activecolor a{color:#fff;}
+body.courses ul.course_selection li#renewable a:hover{color:#434343;}
+body.courses ul.course_selection li#efficiency a:hover{color:#434343;}
+body.courses ul.course_selection li#sustainable a:hover{color:#434343;}
+body.courses ul.course_selection li#gas a:hover{color:#434343;}
+body.courses ul.course_selection li#industry a:hover{color:#434343;}
+html body.courses #course_header_text, html body.courses #course_header_text .course_text{float:left;width:100%;}
+html body.courses #course_list ul{list-style-type:none;}
+html body.courses #course_list ul li a div.left{}
+html body.courses div#rt-transition div#rt-mainbody-surround div#rt-main.mb12 div.rt-container div.rt-grid-12 div.rt-block{margin:0;padding:0;}
+body.logo-type-custom div#rt-transition div#rt-mainbody-surround div#rt-main.mb12 div.rt-container div.rt-grid-12 div.rt-block div#rt-mainbody div.component-content div#course_header_text.rt-grid-12 div.rt-block, html body.logo-type-custom div#rt-transition div#rt-mainbody-surround div#rt-main.mb12 div.rt-container div.rt-grid-12 div.rt-block div#rt-mainbody div.component-content div#container.rt-grid-12 div.left div.rt-block, html body.logo-type-custom div#rt-transition div#rt-mainbody-surround div#rt-main.mb12 div.rt-container div.rt-grid-12 div.rt-block div#rt-mainbody div.component-content div#container div.right div.rt-block{margin:10px 10px 0;padding:15px;}
+html body.courses #rt-sidebar-a div.rt-block.request_form{margin:10px 0 10px 24px !important;padding:15px;}
+.courses #course_header_text .renewable-technology-info{background:none repeat scroll 0 0 #40B93C;color:#fff;}
+.courses #course_header_text .energy-efficiency-info{background:none repeat scroll 0 0 #ED1C24;color:#fff;}
+.courses #course_header_text .sustainable-construction-info{background:none repeat scroll 0 0 #3871C2;color:#fff;}
+.courses #course_header_text .gas-training-assessment-info{background:none repeat scroll 0 0 #FFE91A;color:#434343;}
+.courses #course_header_text .industry-short-courses-info{background:none repeat scroll 0 0 #F2511B;color:#fff;}
+.courses ul#course_selection.nav li a.renewable{background-color:#E3F3E4;width:195px;}
+.courses ul#course_selection.nav li a.efficiency{background-color:#FBDADC;width:148px;}
+.courses ul#course_selection.nav li a.sustainable{background-color:#DBEAF4;width:204px;}
+.courses ul#course_selection.nav li a.gas{background-color:#FEFCDD;width:222px;}
+.courses ul#course_selection.nav li a.short {background-color:#FDE8DE;width:190px;}
+#course_list.IndustryShortCourses .evenfish {width:100%;background-color:#FDE8DE}
+#course_list .course_instance{width:100%;font-size:0.9em;padding:2px;}
+#container #course_list{margin-bottom:15px;}
+body.courses .shop_link{display:inline-block;margin-right:15px!important;float:left;}
+body.courses .book.shop_link{background:none repeat scroll 0 0 #0972B9;border-radius:15px 15px 15px 15px;color:#FFFFFF;font-weight:bold;padding:15px!important;text-decoration:none;height:20px;width:72px;float:left;}
+body.courses .book a p{color:#fff;margin-left:3px;}
+.error-title h1{font-size:1.7em;}
+.swec-error-image{background-color:#1775b8;float:left;margin-right:25px;margin-top:15px;width:350px;}
+.swec-error-image img{margin:25px;}
+p.small{font-size:0.8em;}
+ul.course_selection a{padding:0 14px;}
+ul.course_selection li#renewable.activecolor{background-color:#40b93c;}
+ul.course_selection li#efficiency.activecolor{background-color:#ED1C24;}
+ul.course_selection li#sustainable.activecolor{background-color:#3871C2;}
+ul.course_selection li#gas.activecolor{background-color:#ffe91a;}
+ul.course_selection li#industry.activecolor{background-color:#f2511b;}

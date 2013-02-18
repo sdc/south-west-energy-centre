@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" group="editors-xtd" version="1.5">
+	<name>Button - Articles Anywhere</name>
+	<description>PLG_EDITORS-XTD_ARTICLESANYWHERE_DESC</description>
+	<version>2.4.6FREE</version>
+	<creationDate>October 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="articlesanywhere">articlesanywhere.php</filename>
+		<folder>articlesanywhere</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nnframework/fields">
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="plg_editors-xtd_articlesanywhere" />
+		<param name="@license" type="nn_license" extension="ARTICLES_ANYWHERE" />
+		<param name="@version" type="nn_version" extension="ARTICLES_ANYWHERE" xml="/plugins/editors-xtd/articlesanywhere.xml" />
+		<param name="@dependency" type="nn_dependency"
+			label="AA_THE_SYSTEM_PLUGIN"
+			file="/plugins/system/articlesanywhere.php" />
+		<param name="@header" type="nn_header"
+			label="ARTICLES_ANYWHERE"
+			description="ARTICLES_ANYWHERE_DESC"
+			xml="/plugins/editors-xtd/articlesanywhere.xml"
+			image="/plugins/editors-xtd/articlesanywhere/images/logo.png"
+			image_w="120" image_h="160"
+			url="http://www.nonumber.nl/articlesanywhere"
+			help_url="http://www.nonumber.nl/articlesanywhere" />
+
+		<param name="@notice_settings" type="nn_plaintext" description="AA_SETTINGS" />
+	</params>
+</install>
