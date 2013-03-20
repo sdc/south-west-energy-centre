@@ -71,7 +71,7 @@ body.news div.blognews div.items-row{border-bottom:1px dotted #3BAA35;}
 body.news div.blognews h2{border-bottom:none;color:#2698DE;}
 body.about h2, body.about a{color:#0E71B9;}
 .menutop li.active.root .item > span, .splitmenu .menutop li.active .item span{background:none repeat scroll 0 0 rgb(245, 245, 245);box-shadow:0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px #FFFFFF inset, 0 1px 2px rgba(0, 0, 0, 0.2);color:#333;text-shadow:none;}
-.menutop li.root > .item > span{background:none repeat scroll 0 0 rgba(64, 185, 60, 1);padding:5px 12px!important;box-shadow:0 0 5px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(173, 173, 173, 0.1);border-right:1px solid #E3F3E4}
+.menutop li.root > .item > span, .fusion-submenu-wrapper{background:none repeat scroll 0 0 rgba(64, 185, 60, 1);padding:5px 12px!important;box-shadow:0 0 5px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(173, 173, 173, 0.1);border-right:1px solid #E3F3E4}
 .menutop li{padding-left:5px;}
 .menutop li > .item{color:#fff;}
 #my-tab-content .tab-pane ul li a{font-size:90%;}
