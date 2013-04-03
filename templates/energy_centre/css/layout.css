@@ -129,3 +129,5 @@ ul.course_selection li#efficiency.activecolor{background-color:#ED1C24;}
 ul.course_selection li#sustainable.activecolor{background-color:#3871C2;}
 ul.course_selection li#gas.activecolor{background-color:#ffe91a;}
 ul.course_selection li#industry.activecolor{background-color:#f2511b;}
+html body.logo-type-custom div#rt-transition div#rt-mainbody-surround div#rt-main.mb8-sa4 div.rt-container div.rt-grid-8 div.rt-block div#rt-mainbody div.component-content div.blognews div.pagination ul {width:100%;}
+html body.logo-type-custom div#rt-transition div#rt-mainbody-surround div#rt-main.mb8-sa4 div.rt-container div.rt-grid-8 div.rt-block div#rt-mainbody div.component-content div.blognews div.pagination ul li{display:inline-block;}
