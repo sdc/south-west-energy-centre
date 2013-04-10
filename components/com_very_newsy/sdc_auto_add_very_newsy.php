@@ -29,7 +29,7 @@
  * 14, Ln 340:  New Discussion (first post ID) could not be UPDATEd with new Post's ID
  */
 
-include 'includes/connection.php';
+include '../../includes/connection.php';
 
 $link = mysql_connect($db_ht, $db_ur, $db_pw);
 if (!$link) {
