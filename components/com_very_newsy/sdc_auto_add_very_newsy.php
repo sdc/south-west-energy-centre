@@ -51,7 +51,7 @@ define('TOKEN', 'd73caba5322c65be0b9b3da54b12cec21660d7249ab876478c46536e9859606
                             // The pre-shared key needed to authenticate incoming data.
 define('SLASHES', true);    // Defines wether addslashes() is used or not: development and production may require different settings.
 
-define('USERID', '63');   // The user ID now passed through the XML, so we don't need to define it here.
+define('USERID', '429');   // The user ID now passed through the XML, so we don't need to define it here.
 
 define('STATE', '1');     // Publish state. 1 = published
 
