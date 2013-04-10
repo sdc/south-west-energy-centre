@@ -113,7 +113,7 @@ function fail($err) { // Used when success != true
 
 // Check for allowed hosts. Could create an array and check against it but we don't want more than about 4 allowed 'users'.
 $remote = $_SERVER['REMOTE_ADDR']; // Joomla's most reliable way of getting the remote host's IP address.
-if ($remote != '172.20.1.12' && $remote != '172.21.3.17' && $remote != '172.20.1.50' && $remote != '172.20.1.61') { // Dev server & Brian and website.
+if ($remote != '172.20.1.12' && $remote != '172.21.3.17' && $remote != '172.20.1.55') { // Dev server & Brian and website.
     // Produce a 'fail' header/Joomla log/Apache log with a specific number so the failure can be traced.
     // It gives enough detail that errors can be traced but no information which could easily be used to compromise the server.
     fail(1);
