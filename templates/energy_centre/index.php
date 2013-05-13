@@ -1,13 +1,4 @@
 <?php
-/**
-* @version   $Id: index.php 2968 2012-08-31 22:19:53Z kevin $
- * @author RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
- * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
- */
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted index access' );
 
@@ -30,10 +21,16 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
         $gantry->displayHead();
 
 		$gantry->addStyle('grid-responsive.css', 5);
-    			$gantry->addStyles(array('layout.css'));	
-        $gantry->addLess('global.less', 'master.css', 8, array('headerstyle'=>'"header-'.$gantry->get('headerstyle','dark').'.less"'));
+    $gantry->addStyles(array('layout.css'));	
+    $gantry->addLess('global.less', 'master.css', 8, array('headerstyle'=>'"header-'.$gantry->get('headerstyle','dark').'.less"'));
 
-        if ($gantry->browser->name == 'ie'){
+    if ($gantry->browser->name == 'ie'){
+			if ($gantry->browser->shortversion == 7){
+				$gantry->addScript('html5shim.js');
+			}
+		}
+
+    if ($gantry->browser->name == 'ie'){
 			if ($gantry->browser->shortversion == 8){
 				$gantry->addScript('html5shim.js');
 			}
