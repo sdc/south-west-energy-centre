@@ -13,7 +13,7 @@
  * Industry (Pinky)             : #FDE8DE
 */
 body{background-color:#fff;}
-body p, label{font-size:0.95em!important;line-height:1.4em;float:left;}
+body p, label{font-size:0.95em!important;line-height:1.4em;}
 body h2 span.subheading-category{font-size:1em;padding:0;}
 body h1{font-size:1.5em;}
 body h2{font-size:1.3em;}

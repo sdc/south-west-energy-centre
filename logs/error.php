@@ -15,3 +15,4 @@
 2012-11-07	11:36:04	INFO	127.0.0.1	 FAILURE: 	
 2012-11-07	11:36:13	INFO	127.0.0.1	 FAILURE: 	
 2012-11-08	11:36:40	INFO	127.0.0.1	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
+2013-06-18	09:48:10	INFO	127.0.0.1	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
