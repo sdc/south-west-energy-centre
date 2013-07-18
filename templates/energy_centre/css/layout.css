@@ -1,13 +1,14 @@
 /* 
  * ************** Colour values for stuff ************** 
  * 
- * Light blue   : #0088CC
+ * Light blue   : #1B7ABC
  * Dark blue    : #005580
+ * Green        : #40B93C
  * Font color   : #434343
  * 
  * Backgrounds
- * Renewable (light green)      : #40b93c (Old -- #E3F3E4)
- * Efficiency (Light red)       : #ed1c24 (Old -- #FBDADC)
+ * Renewable (light green)      : #40B93C
+ * Efficiency (Light red)       : #FBDADC
  * Sustainable (Light blue)     : #DBEAF4
  * Gas training (Light yellow)  : #FEFCDD
  * Industry (Pinky)             : #FDE8DE
@@ -16,7 +17,7 @@ body{background-color:#fff;}
 body p, label{font-size:0.95em!important;line-height:1.4em;}
 body h2 span.subheading-category{font-size:1em;padding:0;}
 body h1{font-size:1.5em;}
-body h2{font-size:1.3em;}
+body h2, .component-content h2{font-size:1.3em;}
 body h3{font-size:1.1em;}
 h1, h2, h3, h4, h5, h6{color:#2698DE;}
 a:hover{color:#6e6e6e;}
@@ -58,12 +59,11 @@ ul#tabs.nav li a{height:74px;}
 ul#tabs.nav li .right{margin-left:6px;}
 html body.home #my-tab-content .tab-pane ul, body.home #my-tab-content .tab-pane ul li a{padding:10px;color:#fff;}
 ul#tabs.nav li a{font-size:90%;text-align:center;line-height:1.3em;color:#333;padding:10px;}
-ul#tabs.nav li a
 ul#tabs.nav li a img{padding-bottom:8px;}
-ul#tabs li:first-child{padding-left:10px;}
+ul#tabs li:first-child{padding-left:0px;}
 ul#tabs{margin-bottom:0px;border-bottom:0px;}
 div#my-tab-content div.tab-pane{border-radius:5px;margin-top:1px;}
-ul#tabs.nav li.active{color:#000;}
+ul#tabs.nav li.active{color:#000; margin:0;}
 ul#tabs.nav li.active a.renewable, .home #my-tab-content.tab-content #renewable.tab-pane,#renewable{background-color:#40B93C;color:#fff;}
 ul#tabs.nav li a.renewable, #renewable, #course_list.RenewableTechnology .evenfish{background-color:#E3F3E4;}
 ul#tabs.nav li.active a.efficiency, .home #my-tab-content.tab-content #efficiency.tab-pane{background-color:#ED1C24;color:#fff;}
@@ -76,6 +76,7 @@ ul#tabs.nav li a.gas, #gas, #course_list.GasTrainingAssessment .evenfish{backgro
 ul#tabs.nav li.active a.short, .home #my-tab-content.tab-content #short.tab-pane{background-color:#F2511B;color:#fff;}
 ul#tabs.nav li a.short, #industry{background-color:#FDE8DE;}
 html body.logo-type-custom.contact div#rt-transition div#rt-mainbody-surround div#rt-feature div.rt-container{background:none repeat scroll 0 0 #FCE2D6}
+table {background-color: #fff;}
 body.news div.item h2{font-size:1.5em;}
 body.news div.blognews div.items-row{border-bottom:1px dotted #3BAA35;}
 body.news div.blognews h2{border-bottom:none;color:#2698DE;}
@@ -85,6 +86,8 @@ body.about h2, body.about a{color:#0E71B9;}
 .menutop li{padding-left:5px;}
 .menutop li > .item{color:#fff;}
 .rt-block.blue_countdown {background-color:#1b7abc;margin-right:0px;}
+.rt-block.blue_countdown a {color:#fff;}
+.rt-block.blue_countdown a:hover {text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);}
 #my-tab-content .tab-pane ul li a{font-size:90%;}
 body.courses .rt-block.course_buttons{margin:10px 0;padding:0;float:left;}
 body.courses ul.course_selection{float:left;margin:0;}
