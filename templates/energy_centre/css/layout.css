@@ -25,6 +25,7 @@ a:hover{color:#6e6e6e;}
 header#rt-top-surround{background:url("../../../images/template-images/header.gif") no-repeat scroll 0 0 #fff !important;height:185px;width:960px;margin:0 auto;box-shadow:none;border:none;padding-bottom:5px;}
 header#rt-top-surround #rt-top .rt-container a#rt-logo{margin-top:18px;}
 header#rt-top-surround div#rt-header .rt-container .rok_search, header#rt-top-surround div#rt-header .rt-container .social_media_icon{padding:0;text-align:right;}
+.front-slider {padding-top:0; padding-left:0px; margin-left: 0px;}
 html body.logo-type-custom div.fusion-js-container div.fusion-js-subs {
   padding: 0 0 0 0!important;
   border-radius: 5px 5px 5px 5px;
