@@ -136,11 +136,15 @@ function text_strip($in) {
               </div>
             <? } ?>
             </div>
-            <a href="<?php echo xml_text($dom,'shop-url');?>" target="_blank">
-              <div class="rt-block book shop_link">
-                <p>Book now</p>
-              </div>
-            </a>
+            <?php 
+              if (xml_text($dom,'shop-url') == ""){ 
+              } else { ?>
+              <a href="<?php echo xml_text($dom,'shop-url');?>" target="_blank">
+                <div class="rt-block book shop_link">
+                  <p>Book now</p>
+                </div>
+              </a>
+            <?php } ?>
           </div>
         </div>
         <div class="right rt-grid-4">
