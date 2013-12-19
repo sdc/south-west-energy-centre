@@ -79,7 +79,7 @@ function text_strip($in) {
 ?>
 
 <?php
-  if($course_id){
+  if($course_id) {
     $dom =  DOMDocument::loadXML(get_xml("$cis_url/courses/$course_id.xml"));
     $idom = DOMDocument::loadXML(get_xml("$cis_url/courses/$course_id/instances.xml"));
     if (xml_text($dom,'status') == "L"){
@@ -104,40 +104,33 @@ function text_strip($in) {
             <?php print_element('What else might I want to know?',$dom,'want-to-know-web') ?>
             <?php print_element('Entry Requirements',$dom,'entry-requirements-web') ?>
             <?php print_element('What can I do afterwards?',$dom,'do-afterwards-web') ?>
-             <!--
-             <#?php if ($target =="" OR $target=="RenewableTechnology") { ?>
-              <div class="rt-block shop_link can_link">
-                <a href="<?php echo xml_text($dom,'shop-url');?>" >
-                  <img src="images/template-images/book-now-with-your-can-number.jpg" alt="Book now" title=""/>
-                </a>
-              </div>
-            <#?php } ?>
-            -->        
+      
             <div id="course_list" class="rt-grid-8 <?php echo $target; ?>">    
               <?php $instances = $idom->getElementsByTagName('course-instance');
               foreach ($instances as $subject) {   ?>
-              <div class="course_instance rt-grid-8">
-                <div class="right rt-grid-8">
-                  <div class="right rt-grid-2">
-                    <p>Start Date:</p>
+                <div class="course_instance rt-grid-8">
+                  <div class="right rt-grid-8">
+                    <div class="right rt-grid-2">
+                      <p>Start Date:</p>
+                    </div>
+                    <div class="right rt-grid-2">
+                      <?php $sd = xml_text($subject,'startenddates-display'); echo $sd ? $sd : "Contact us for next date" ?>
+                    </div>
                   </div>
-                  <div class="right rt-grid-2">
-                    <? $sd = xml_text($subject,'startenddates-display'); echo $sd ? $sd : "Contact us for next date" ?>
+                  <div class="right rt-grid-8">
+                    <div class="right rt-grid-2">
+                      <p>Fees:</p>
+                    </div>
+                    <div class="right rt-grid-2">
+                      <?php echo cashify(xml_text($subject,'total-fees'))?>
+                    </div>
                   </div>
                 </div>
-                <div class="right rt-grid-8">
-                  <div class="right rt-grid-2">
-                    <p>Fees:</p>
-                  </div>
-                  <div class="right rt-grid-2">
-                    <?echo cashify(xml_text($subject,'total-fees'))?>
-                  </div>
-                </div>
-              </div>
-            <? } ?>
+              <?php } ?>
             </div>
             <?php 
               if (xml_text($dom,'shop-url') == ""){ 
+                echo 'For more information about the dates available and prices for this course, or to submit an application, please contact the team directly on 01803 540725 or email <a href="mailto:info@southwestenergycentre.com">info@southwestenergycentre.com</a>';
               } else { ?>
               <a href="<?php echo xml_text($dom,'shop-url');?>" target="_blank">
                 <div class="rt-block book shop_link">
@@ -290,7 +283,7 @@ if ($item->length == 0) {
     <?php require_once('_mcForm_mcModule.php'); ?>
   </div>
 </div>
-<? } ?>
+<?php } ?>
 
 <script type="text/javascript">
   $('.instance').each(function(i,e) {
